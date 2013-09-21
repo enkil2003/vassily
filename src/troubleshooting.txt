@@ -1,0 +1,9 @@
+These are a few workarounds for problems that I had trying to setup a new environment under linux.
+
+you could have to create if not exists and check for the file/directory permission to be 777 on:
+
+trunk/logs/apache/access.log
+trunk/logs/apache/deflate.log
+trunk/logs/apache/error.log
+trunk/logs/php/error.log
+trunk/application/cache

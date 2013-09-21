@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+  /* ADD PRODUCT */ 
+#categoryForm .ui-helper-clearfix:after {
+    clear: none;
+    content: ".";
+    display: block;
+    height: 32px;
+    visibility: hidden;
+}
+#categoryForm #tabContainer {
+    margin-bottom: 10px;
+}
+#categoryForm #tabs .subcategoriesCheckboxes {
+    display: inline-block;
+    border: 1px solid #CCC;
+    width: 180px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+}
+#categoryForm #tabs .subcategoriesCheckboxes label {
+    display: block;
+}
+#categoryForm .formElements  {
+    margin-bottom: 10px;
+}
+#categoryForm .formElements label {
+    display: block;
+}
+#categoryForm #images {
+    clear: both;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-top: 0;
+}
+#categoryForm .price,
+#categoryForm .name,
+#categoryForm .width,
+#categoryForm .height,
+#categoryForm .depth {
+    display: inline-block;
+    margin-right: 10px;
+}
+#catalogContainer #categoryForm {
+    width: 694px;
+    background-color: #FFF;
+    border: 1px solid #999;
+    padding: 10px;
+    float: left;
+}
+#categoryForm .ui-tabs .ui-tabs-nav li a {
+    margin-right: 1px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+#categoryForm #tabs-medidas div,
+#categoryForm #tabs-descripcion div,
+#categoryForm #images div {
+    vertical-align: top;
+}
+#categoryForm #name,
+#categoryForm #price,
+#categoryForm #width,
+#categoryForm #height,
+#categoryForm #depth {
+    width: 237px;
+    margin-bottom: 10px;
+}
+#categoryForm #width,
+#categoryForm #height,
+#categoryForm #depth {
+    width: 153px;
+}
+#categoryForm #depth {
+    margin-left: -1px;
+}
+#categoryForm #messenger {
+    display: none;
+}
+#categoryForm .error {
+    display: none;
+}
+#categoryForm .imagesError {
+    margin-top: 10px;
+}
+#categoryForm .categoriesTab {
+    margin-bottom: 10px;
+}
+#categoryForm .subcategoriesCheckboxes label {
+    border: 1px solid #DDD !important;
+    margin: 5px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 184px;
+    min-height: 40px;
+    vertical-align: top;
+    cursor: pointer;
+}
+#categoryForm .subcategoriesCheckboxes br {
+    display: none;
+}
+#categoryForm #thumbImages {
+    margin-top: 10px;
+}
+#categoryForm #thumbImages .imageHolder {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+#categoryForm #thumbImages .remove {
+    background-image: url("/images/delete-icon.png");
+    cursor: pointer;
+    height: 10px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+}
+.show {
+    display: inherit !important;
+}
+/* @TODO llevar esto a un lugar mas copado */ 
+#adminCrud {
+    width: 186px;
+}

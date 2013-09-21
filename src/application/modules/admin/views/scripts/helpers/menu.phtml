@@ -1,0 +1,42 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-21 02:52:31 -0300 (Tue, 21 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/modules/admin/views/scripts/helpers/menu.phtml $
+ * @revision - $Revision: 431 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-21 02:52:31 -0300 (Tue, 21 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<menu id="menuMainCategory" class="clear">
+<?php 
+$count = count($this->categories);
+for($i=0; $i < $count; $i++):
+    $c = $this->categories[$i];
+    $last = '';
+    if($i == ($count-1)) {
+        $last = 'removeSeparator';
+    }
+    $controller = isset($c['controller'])? $c['controller']:'';
+    $action = isset($c['action'])? $c['action']:'';
+    $class = isset($c['class'])? $c['class']:'';
+    $name = isset($c['name'])? $c['name']:'';
+?>
+  <li class="<?php echo $last; ?>">
+    <a href="/admin/<?php echo $controller; ?>/<?php echo $action; ?>"
+      class="<?php echo $class; ?>">
+      <?php echo $name; ?>
+    </a>
+  </li>
+<?php
+endfor;
+?>
+</menu>

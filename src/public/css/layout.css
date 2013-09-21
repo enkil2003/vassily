@@ -1,0 +1,448 @@
+@CHARSET "UTF-8";
+html {
+    overflow-y: scroll;
+}
+*,
+#productGrid,
+#yourProject,
+.productDetail {
+    font-family: "Trebuchet MS", trebuc, sans-serif;
+}
+a {
+    color: #444;
+    text-decoration: none !important;
+}
+a:focus,
+a:hover {
+    color: #A70B16;
+    text-decoration: none;
+}
+.errors {
+width: 229px;
+border: 1px solid black;
+margin-left: 293px;
+margin-right: auto;
+list-style: none;
+padding: 0.8em;
+margin-bottom: 1em;
+border: 2px solid #FBC2C4;
+background: #FBE3E4;
+color: #8A1F11;
+}
+a:link:after {
+    content: '' !important;
+}
+.container {
+    border: 1px solid #999;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+#layoutHeader {
+    height: 92px;
+    padding-top: 20px;
+}
+#layoutHeader nav {
+    height: 100%;
+}
+#layoutHeader nav li {
+    border-right: 1px solid #999;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 11px;
+    list-style: none outside none;
+    padding: 0 7px;
+}
+#layoutHeader li.removeSeparator,
+#menuMainCategory li.removeSeparator {
+    border-right: none !important;
+}
+#layoutHeader #userMenu {
+    /* has Firefox hack */
+    margin-bottom: 67px;
+}
+#layoutHeader nav menu {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 12px;
+}
+#logo {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -931px;
+    margin: 25px 0 0 10px;
+    width: 426px;
+    height: 92px;
+}
+#menuMainCategory {
+    /* has firefox hack */
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    margin-bottom: 0;
+    margin-top: 32px;
+    padding: 5px 0 5px 5px;
+    text-align: center;
+}
+#menuMainCategory li {
+    /* has js hack, located in file menu.phtml */
+    border-right: 1px solid #999;
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 17px;
+    padding-right: 17px;
+    text-transform: uppercase;
+}
+#pageMainContent {
+    margin: 0 20px 0 18px;
+}
+.greyArea {
+    background-color: #F3F3F5;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+#promotion {
+    height: 403px;
+}
+#promotion div {
+    height: 403px !important;
+    overflow: hidden;
+    background-color: #FFF;
+}
+#promotion #imagepromotion {
+    height: 403px;
+    border: 1px solid #999;
+    overflow: hidden;
+    display: inline-block;
+}
+#promotion #descriptionpromotion {
+    height: 398px;
+    border: 1px solid #999;
+    display: inline-block;
+}
+#yourProject {
+    /* has firefox hack */
+    border: 1px solid #999;
+    width: 892px;
+    padding: 14px 10px;
+    background-color: #FFF;
+    font-weight: bold;
+    height: 184px;
+    margin-bottom: 10px;
+}
+#yourProject > div {
+    float: left;
+}
+#yourProject #firstColumn {
+    width: 248px;
+    position: relative;
+}
+#yourProject #firstColumn p span {
+    /* has firefox hack */
+    color: #6BBDA6;
+    font-size: 37px;
+    lin-height: 60px;
+}
+#yourProject div p.more {
+    /* has firefox hack */
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+    position: absolute;
+    text-align: right;
+    top: 159px;
+    width: 246px;
+    font-family: "Trebuchet MS", trebuc;
+}
+#yourProject #secondColumn {
+    /* has firefox hack */
+    width: 418px;
+}
+#yourProject .separator {
+    background-color: #999999 !important;
+    margin: 0 10px;
+    width: 1px;
+}
+#yourProject > div:last-child {
+    clear: both !important;
+    float: none;
+}
+#yourProject input[type="email"],
+#yourProject input[type="text"] {
+    /* has firefox hack */
+    width: 166px;
+}
+#yourProject #quickNewsletterFormHolder {
+    margin-top: 47px;
+    position: relative;
+}
+#yourProject .social {
+    /* has firefox hack */
+    padding-left: 0;
+}
+#yourProject .social li {
+    width: 160px;
+    list-style-type: none;
+    height: 40px;
+    overflow-x: hidden;
+}
+/* NEWS AND OFERS */
+#newAndOfers {
+    margin-bottom: 10px;
+}
+#newAndOfers > article {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    display: inline-block;
+    height: 350px;
+    margin-right: 7px;
+    padding: 0;
+    vertical-align: top;
+    width: 296px;
+}
+#newAndOfers header {
+    background-color: #999;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    height: 27px;
+    margin-top: 13px;
+    padding: 3px 0 0 7px;
+    width: 143px;
+    padding: 3px 0 0 7px;
+    font-family: "Trebuchet MS", trebucbd;
+}
+#newAndOfers header h3 {
+    color: #FFF;
+}
+#newAndOfers figure {
+    clear: both;
+    float: left;
+    height: 285px;
+    width: 100%;
+    position: relative;
+}
+#newAndOfers figcaption {
+    color: #D96981;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    height: 100%;
+    letter-spacing: -2px;
+    line-height: 23px;
+    width: 113px;
+    font-family: arial;
+}
+#newAndOfers figcaption a {
+    display: block;
+}
+#newAndOfers img {
+    width: 171px;
+    float: left;
+}
+#newAndOfers .more {
+    height: 2em;
+    left: -7px;
+    position: relative;
+    top: -20px;
+}
+#quickNewsletterFormHolder #send {
+    /* has ie fix */
+    width: 70px;
+    height: 22px;
+    padding-top: 2px;
+}
+#behindContainer {
+    top: 10px;
+    width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    position: fixed;
+    /* 
+     * Esta altura fue llevada a cero ya que el div al ser de block ocupaba todo el largo y cualquier cosa que quedara
+     * debajo perdia el foco y no se podia clickear, por ejemplo botones como el login, registrse, etc
+     */
+    height: 0; 
+}
+#behind {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -546px;
+    width: 29px;
+    height: 28px;
+    display: inline-block;
+    height: 28px;
+    width: 29px;
+    z-index:200;
+    position: relative;
+    float: right;
+    margin-top: -10px;
+}
+#headerPromotionHolders {
+    width: 914px;
+}
+/* compatibility hacks */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    /*
+     * fix for mozilla place holders
+     * @see http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css
+     */
+    color: #AAA;
+}
+select {
+    border-color: #AAA;
+}
+/* HELPERS */
+footer.helper.more {
+    font-family: "Trebuchet MS", trebuc, sans-serif !important;
+}
+.menuStepContainer {
+    height: 41px;
+    background-color: #FFF;
+    padding: 5px;
+    border: 1px solid #999;
+}
+.menuSteps div {
+    float: left;
+}
+.menuSteps .arrow {
+    height: 41px;
+    margin-left: -10px;
+}
+.menuSteps .left {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -455px;
+    width: 17px;
+    height: 41px;
+}
+.menuSteps .greyArrow .left {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -182px;
+}
+.menuSteps .arrow:first-child {
+    margin-left: 0px;
+}
+.menuSteps .arrow.whiteArrow:first-child .left {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -364px;
+    width: 5px;
+}
+.menuSteps .arrow.greyArrow:first-child .left {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -273px;
+    width: 5px;
+}
+.menuSteps .content {
+    /* has firefox hack */
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -91px;
+    height: 31px;
+    min-width: 80px;
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.menuSteps .greyArrow .content {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 0;
+    height: 41px;
+}
+.menuSteps .right {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -840px;
+    width: 15px;
+    height: 41px;
+}
+.menuSteps .greyArrow .right {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -749px;
+}
+.menuSteps .selected,
+.menuSteps .selected a {
+    color: #A70B16;
+}
+/* Forms */
+button[type="submit"],
+button[type="button"],
+input[type="submit"],
+input[type="button"] {
+    background-color: #E2E3E5;
+    color: #A70B16;
+    font-weight: bold;
+    border: 1px solid #B4B5B7;
+    cursor: pointer;
+    min-width: 66px;
+    font-size: 12px;
+}
+@-moz-document url-prefix() {
+    /* firefox hack */
+    #layoutHeader #userMenu {
+        margin-top: 11px;
+    }
+    #menuMainCategory {
+        padding-top: 4px;
+        height: 22px;
+    }
+    .menuSteps .content {
+        padding-top: 9px;
+        height: 32px;
+    }
+    #yourProject {
+        padding-top: 13px;
+        padding-bottom: 15px;
+    }
+    #yourProject #firstColumn p span {
+        margin-left: 1px;
+    }
+    #yourProject div p.more {
+        margin-top: 1px;
+    }
+    #yourProject #secondColumn {
+        margin-top: 1px;
+    }
+    #yourProject #secondColumn h4 {
+        margin-bottom: 16px;
+    }
+    #yourProject input[type="email"],
+    #yourProject input[type="text"] {
+        height: 18px;
+    }
+    #yourProject #send {
+        height: 22px;
+        position: relative;
+        top: 1px;
+    }
+    #yourProject #thirdColumn {
+        margin-top: 1px;
+    }
+    #yourProject .social {
+        margin-top: -1px;
+    }
+}
+.more {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+}
+#catalogContainer {
+    margin-bottom: 10px;
+}
+/* @TODO Esto corresponde al newsletter de registracion global podria cargarlo solo cuando lo necesito */
+#quickNewsletterStatusMessenger {
+    background-color: #ADDFAE;
+    position: absolute;
+    top: -40px;
+}
+
+#framedLoggin ul {
+    padding: 0;
+}
+#framedLoggin li {
+    list-style: none;
+}
+#framedLoggin button {
+    margin-top: 5px;
+}

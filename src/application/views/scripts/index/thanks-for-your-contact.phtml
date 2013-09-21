@@ -1,0 +1,30 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/index/thanks-for-your-contact.phtml $
+ * @revision - $Revision: 322 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<section id="thanksForYourContactHolder">
+  <fieldset>
+    <legend><?php echo $this->translate('FORMULARIO DE CONTACTO')?></legend>
+    <div class="disclaimer">
+      <p><?php echo $this->translate('Tu consulta ha sido enviada con exito!')?><br />
+      <?php echo $this->translate('A la brevedad nos pondremos en contacto.')?></p>
+      <p><?php echo $this->translate('Muchas Gracias')?>!
+    </div>
+  </fieldset>
+</section>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

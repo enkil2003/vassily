@@ -1,0 +1,45 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-01-03 01:32:14 -0300 (Tue, 03 Jan 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/layouts/partials/header.phtml $
+ * @revision - $Revision: 344 $
+ *   
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-01-03 01:32:14 -0300 (Tue, 03 Jan 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php 
+$hasIdentity = Zend_Auth::getInstance()->hasIdentity();
+?>
+<header id="layoutHeader">
+  <a href="/"><div id="logo" class="span-11"></div></a>
+  <nav class="prepend-12">
+    <menu id="userMenu">
+      <li class="logout" style="<?php echo $hasIdentity? '': 'display: none'?>"><a href="/logout"><?php echo $this->translate('LOG OUT')?></a></li>
+      <?php if (
+        My_Auth_Role::getUserRole() == My_Auth_Role::ADMIN ||
+        My_Auth_Role::getUserRole() == My_Auth_Role::SUPER
+      ): ?>
+        <li><a href="/admin"><?php echo $this->translate('PANEL DE CONTROL')?></a></li>
+      <?php endif;?>
+      <li class="userControlPanel" style="<?php echo $hasIdentity? '': 'display: none'?>"><a href="/<?php echo $this->translate('mi-vassilymas'); ?>"><?php echo $this->translate('MI VASSILYMAS')?></a></li>
+      <li class="login" style="<?php echo !$hasIdentity? '': 'display: none'?>"><a href="/login"><?php echo $this->translate('LOG IN')?></a></li>
+      <li class="register" style="<?php echo !$hasIdentity? '': 'display: none'?>"><a href="/<?php echo $this->translate('registrate')?>"><?php echo $this->translate('REGISTRATE')?></a></li>
+      <li class="myCart removeSeparator"><a href="/<?php echo $this->translate('mi-carrito'); ?>"><?php echo $this->translate('MI CARRITO')?></a></li>
+    </menu>
+    <menu>
+      <li><a href="/<?php echo $this->translate('contacto'); ?>"><?php echo $this->translate('CONTACTO')?></a></li>
+      <li class="removeSeparator"><a href="/newsletter"><?php echo $this->translate('NEWSLETTER')?></a></li>
+    </menu>
+  </nav>
+</header>
+<?php 
+echo $this->menu();

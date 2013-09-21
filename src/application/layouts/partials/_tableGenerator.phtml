@@ -1,0 +1,40 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/layouts/partials/_tableGenerator.phtml $
+ * @revision - $Revision: 322 $
+ *   
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<table id="<?php echo $this->id; ?>" class="tablesorter">
+  <thead>
+    <tr>
+      <?php foreach($this->header as $h):?>
+      <th class="column-<?php echo $h; ?>"><?php echo ucwords($h); ?></th>
+      <?php endforeach; ?>
+      <th class="column-remove"><?php echo $this->translate('Eliminar')?></th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($this->body as $b):?>
+      <tr>
+      <?php foreach($b as $data):?>
+        <td><a href="<?php echo $data['url']; ?>"><?php echo $data['text']; ?></a></td>
+      <?php endforeach; ?>
+        <td class="column-remove">
+            <div data-id="<?php echo $b[0]['text']; ?>"></div>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>

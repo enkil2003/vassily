@@ -1,0 +1,39 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-19 14:22:01 -0300 (Sun, 19 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/helpers/menuSteps.phtml $
+ * @revision - $Revision: 415 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-19 14:22:01 -0300 (Sun, 19 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php
+$filter = new Zend_Filter_Word_DashToSeparator();
+?>
+<div class="menuStepContainer">
+  <div class="menuSteps <?php echo $this->extraClasses;?>">
+  <?php foreach($this->steps as $step):?>
+    <div class="arrow <?php echo isset($step['selected'])? 'greyArrow selected':'whiteArrow'?>">
+      <div class="left"></div>
+      <div class="content">
+        <?php if (isset($step['selected'])): ?>
+          <span class="selected"><?php echo $filter->filter($step['label']); ?></span>
+        <?php else: ?>
+          <a href="<?php echo strtolower($this->escape($step['href']))?>"><?php echo $filter->filter($step['label'])?></a>
+        <?php endif; ?>
+      </div>
+      <div class="right"></div>
+    </div>
+  <?php endforeach;?>
+  </div>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,9 @@
+@CHARSET "utf-8";
+#adminPromotionsContainer {
+    margin-top: 5px;
+}
+#adminPromotionsContainer .headerPromotionAdminHolder {
+    overflow: hidden;
+    height: 89px;
+    width: 646px;
+}

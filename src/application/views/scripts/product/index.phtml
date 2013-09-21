@@ -1,0 +1,67 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-19 14:27:46 -0300 (Sun, 19 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/product/index.phtml $
+ * @revision - $Revision: 418 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-19 14:27:46 -0300 (Sun, 19 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('headerPromotion')->captureStart(); ?>
+<?php echo $this->menuSteps(); ?>
+<?php $this->placeholder('headerPromotion')->captureEnd(); ?>
+<?php $this->placeholder('catalogLeftColumn')->captureStart(); ?>
+<section class="productDetail">
+<div class="images">
+    <div class="detailMargin">
+      <h3><?php echo $this->product['name']; ?></h3>
+      <figure class="loadingPikachoose"><img src="<?php echo APPLICATION_CDN;?>/images/loading.gif" /></figure>
+      <?php
+      $images = array();
+      foreach($this->product['Images'] as $i) {
+          $images[] = $i['name'];
+      }
+      echo $this->pikachoose($images);
+      ?>
+    </div>
+  </div>
+</section>
+<?php $this->placeholder('catalogLeftColumn')->captureEnd(); ?>
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<section class="productDetail">
+<div class="detail">
+    <div class="detailMargin">
+      <div class="socialHolder">
+        <ul class="social">
+          <li><?php echo $this->facebookButtons(); ?></li>
+          <li><?php echo $this->twitterButtons(); ?></li>
+          <li><?php echo $this->googlePlusButtons(); ?></li>
+        </ul>
+      </div>
+      <dl>
+        <dt><?php echo $this->translate('Descripción')?>:</dt>
+          <dd><?php echo $this->product['description']; ?></dd>
+        <dt><?php echo $this->translate('Medidas')?></dt>
+          <dd><?php echo $this->translate('Ancho')?>: <?php echo $this->product['width']; ?> mts</dd>
+          <dd><?php echo $this->translate('Alto')?>: <?php echo $this->product['height']; ?> mts</dd>
+          <dd><?php echo $this->translate('Profundidad')?>: <?php echo $this->product['depth']; ?> mts</dd>
+        <dt><?php echo $this->translate('Materiales')?></dt>
+          <dd><?php echo $this->product['materials']; ?></dd>
+      </dl>
+      <p class="price"><?php echo $this->translate('Precio')?> <span class="value">$ <?php echo $this->product['price']; ?></span></p>
+      <?php 
+      echo $this->form;
+      ?>
+    </div>
+  </div>
+</section>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

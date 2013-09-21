@@ -1,0 +1,350 @@
+@CHARSET "UTF-8";
+/* COMMON */
+.step1Holder,
+.step2Holder,
+.step3Holder,
+.step4Holder {
+    background-color: #FFF;
+    border: 1px solid #999;
+    padding: 30px 10px 10px;
+    width: 892px;
+    position: relative;
+}
+#headerPromotionHolders {
+    margin-bottom: 10px;
+}
+.stepsHolder .steps {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    cursor: pointer;
+}
+.stepsHolder li {
+    list-style: none;
+    color: #717173;
+    font-size: 15px;
+}
+.stepsHolder .steps li {
+    background-color: #9D9EA0;
+    display: inline-block;
+    color: #FFF;
+    font-weight: bold;
+    margin-right: 2px;
+    padding-right: 10px;
+    border: 1px solid #9D9EA0;
+}
+.stepsHolder .steps .selected {
+    background-color: #FFF;
+    color: #A70B16;
+    border-color: #000;
+}
+.stepsHolder .steps .text {
+    position: relative;
+    top: -2px;
+}
+.stepsHolder .steps .number {
+    background-color: #A70B16;
+    display: inline-block;
+    color: #FFF;
+    font-size: 16px;
+    height: 28px;
+    padding-top: 2px;
+    text-align: center;
+    vertical-align: 2px;
+    width: 30px;
+}
+
+.stepsHolder label[for="payMethod-arrival"],
+.stepsHolder label[for="payMethod-transaction"],
+.stepsHolder label[for="reception-send"],
+.stepsHolder label[for="reception-pickup"],
+.stepsHolder label[for="reception-anotherAddress"] {
+    color: #A70B16;
+    font-size: 17px;
+    font-weight: normal;
+}
+.stepsHolder label[for="payMethod-arrival"],
+.stepsHolder label[for="reception-send"] {
+    left: 30px;
+    position: relative;
+    top: 20px;
+}
+.stepsHolder label[for="payMethod-transaction"],
+.stepsHolder label[for="reception-pickup"] {
+    left: 303px;
+    position: relative;
+    top: 20px;
+}
+.stepsHolder label[for="reception-anotherAddress"] {
+    left: 40px;
+    position: absolute;
+    top: 253px;
+}
+.stepsHolder .deliveryData li:first-child, 
+.stepsHolder .aditionalInformation li:first-child {
+    margin-bottom: 20px;
+}
+.stepsHolder .separator {
+    border-right: 1px solid #999;
+    height: 697px;
+    left: 400px;
+    position: absolute;
+    top: -201px;
+}
+/* STEP 1 */
+.step1Holder h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+    margin-top: 40px;
+}
+.step1Holder .cartGrid th {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 14px;
+}
+.step1Holder tbody tr:nth-child(2n) td, tbody tr.even td {
+    background-color: transparent;
+}
+.step1Holder tbody td {
+    border-bottom: 1px solid #999;
+}
+.step1Holder .product {
+    width: 150px;
+}
+.step1Holder .description {
+    width: 350px;
+}
+.step1Holder .quantity {
+    width: 140px;
+}
+.step1Holder .noteAndPrice .total {
+    margin-left: 690px;
+    position: relative;
+    top: -62px;
+    width: 100px;
+}
+.step1Holder .removeBtn {
+    cursor: pointer;
+}
+.step1Holder .note {
+    left: 450px;
+    position: relative;
+    top: -24px;
+    width: 219px;
+}
+.step1Holder .note p {
+    margin-bottom: 0px;
+    text-align: right;
+}
+.step1Holder #buy {
+    margin-left: 690px;
+    position: relative;
+    top: -30px;
+}
+.step1Holder .cartGrid .inputHolder {
+    border: 1px solid;
+    height: 30px;
+    margin-left: 20px;
+    width: 30px;
+    background-color: #FFFFCE;
+}
+.step1Holder .cartGrid input {
+    border: none;
+    width: 30px;
+    text-align: center;
+    background-color: transparent;
+}
+.step1Holder img {
+    margin-top: 4px;
+}
+.step2Holder, .step3Holder, .step4Holder {
+    display: none;
+}
+/* STEP 2 */
+.step2Holder {
+    min-height: 800px;
+}
+.step2Holder .step2ButtonHolder {
+    position: relative;
+    clear: both;
+}
+.step2Holder button[type="button"] {
+    left: 710px;
+    position: relative;
+}
+.step3Holder .aditionalInformation,
+.step2Holder .deliveryData,
+.step2Holder .otherAddress {
+    left: 33px;
+    position: relative;
+    top: 40px;
+}
+.step2Holder .otherAddress .legend,
+.step2Holder .pickup .annotations p {
+    color: #717173;
+    margin-top: -15px;
+    font-size: 15px;
+    margin-left: 18px;
+    width: 273px;
+}
+.step2Holder input[type="text"] {
+    width: 220px;
+    height: 21px;
+}
+.step2Holder .otherAddress li {
+    font-size: 13px;
+}
+.step2Holder .otherAddress li label {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+    vertical-align: top;
+    width: 120px;
+}
+.step2Holder .pickup label[for="pickUpAditionalInfo"] {
+    position: relative;
+    top: -58px;
+}
+.step2Holder .otherAddress li span.required,
+.step2Holder .pickup li span.required  {
+    color: #A70B16;
+    font-size: 33px;
+    left: 0;
+    position: absolute;
+    vertical-align: top;
+}
+.step2Holder .otherAddress textarea,
+.step2Holder .pickup textarea {
+    width: 210px;
+    height: 60px;
+}
+.step2Holder h4 {
+    color: #A70B16;
+    font-size: 17px;
+    margin-left: 18px;
+    width: 300px;
+}
+.step3Holder .payMethod {
+    margin-top: -137px;
+    position: relative;
+    width: 400px;
+}
+.step2Holder .pickup h4 {
+    color: #717173;
+    font-size: 15px;
+    list-style: none outside none;
+    width: 265px;
+    margin-top: -1px;
+}
+.step2Holder .pickup label {
+    margin-left: 10px;
+    font-size: 13px;
+}
+.step2Holder .pickup label[for="address"] {
+    display: inline-block;
+    position: relative;
+    top: -42px;
+    width: 100px;
+}
+.step2Holder .pickup .annotations h4 {
+    color: #A70B16;
+    font-size: 17px;
+    margin-left: 18px;
+    width: 300px;
+}
+.step2Holder .pickup .annotations p {
+    color: #717173;
+    font-size: 15px;
+    margin-left: 18px;
+    width: 330px;
+}
+.step2Holder .columnA {
+    float: left;
+    width: 430px;
+}
+.step2Holder .columnB {
+    float: left;
+    margin-top: 90px;
+    position: relative;
+}
+.step2Holder .pickup {
+    margin-left: 25px;
+}
+.step2Holder .pickup span.required{
+    left: 26px !important;
+}
+/* Step 3 Holder */
+.step3Holder {
+    height: 360px;
+}
+.step3Holder .aditionalInformation ul {
+    width: 265px;
+}
+.step3Holder .separator {
+    top: -45px;
+    height: 270px;
+}
+.step3Holder .payMethod {
+    left: 435px;
+}
+.step3Holder .payMethod h4 {
+    color: #717173;
+    font-size: 15px;
+    line-height: 22px;
+    list-style: none outside none;
+    margin-left: 53px;
+    margin-top: -2px;
+    width: 270px;
+}
+.step3Holder label[for="payMethod-transaction"] {
+    left: 265px;
+}
+.step3Holder .payMethod ul {
+    margin-left: 30px;
+}
+.step3Holder #step3Button {
+    left: 716px;
+    position: relative;
+    top: 50px;
+}
+/* STEP 4 */
+.step4Holder h4 {
+    color: #A70B16;
+    display: table;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 22px;
+}
+.step4Holder p {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    text-align: center;
+}
+.step4Holder p span {
+    color: #A70B16;
+}
+
+/* form errors */
+.stepsHolder .error {
+    width: 198px;
+}
+.stepsHolder input.error {
+    padding: 0;
+}
+.stepsHolder .deliveryData {
+    margin-bottom: 69px;
+}
+.stepsHolder #paymentIconsHolder {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -1397px;
+    width: 242px;
+    height: 57px;
+    margin-left: 50px;
+    margin-top: 23px;
+}

@@ -1,0 +1,350 @@
+Tareas Finalizadas
+==================
+1 ---
+fue movida a ideas
+
+1.2 ---
+La imagen no esta en el tamaño adecuado
+
+1.3 ---
+fue movida a ideas
+
+2 ---
+Se armo un administrador minimo para las promociones de imagenes como header, promotion y promotionText
+
+4 ---
+optimizar carga de js y css
+
+5.1 ---
+algo paso a partir de las primeras pruebas de uso de cdn que en el menu dejo de funcionar las fuentes que tiene
+asignadas, pero solo en firefox, en algun momento mirando el firebug vi que tardaban mucho las fuentes
+El numero aproximado de revision es 132, estuve haciendo comentarios en el svn
+
+7 ---
+Desahabilitar el boton de enviar cuando se paso la validacion del producto, asi no intentar reenviar todo
+
+8 ---
+Cuando se editan las categorias, se ven caracteres html
+
+9 ---
+se tradujo el plupload
+
+10 ---
+No se ve el icono de remove en modificacion de producto
+
+13 ---
+Formularios para modificar la imagen de la promocion en el index
+
+14 ---
+http://vassilymas.local/showroom/comedor/1/sillas-&-sillones/15/asdasd
+me tira que no encuentra un archivo 75-black.png en
+http://staticvassilymas.local/css/75-black.png
+
+15 ---
+Crear la seccion de actualizacion de datos
+
+16 --- duplicado en 49
+tengo que poner una excepcion para que el usuario si intenta entrar en login
+lo patee a otro lado
+archivo My_Auth_Acl
+
+17 ---
+Los formularios deben caducar y no poder re-postear.
+Ejemplo de porque:
+Estaba dando de alta un usuario cuando movia unas acciones, se dio de alta un usuario, no encontro el archivo
+success.phtml, y tiro un error. Presione F5 y reenvie, y como el usuario lo habia dado de alta, intento volver a
+hacerlo y tiro integrite error
+
+17.1 ---
+Que el formulario de contacto redireccione a enviado con exito
+
+17.2 ---
+Que el formulario de contacto caduque
+
+
+19 ---
+en el layout css las imagenes se cargan por el cdn, si entro con el celular no las veo tengo una direccion absoluta
+en los css para poder llamarlo del cdn y no tengo modificado el host en mi celular
+
+20 ---
+terminar los hacks para firefox en login.css se ve muy diferente en firefox
+
+21 ---
+cuando me deslogueo tengo que borrar la orden de la session
+
+22 ---
+tengo que hacer algo con la opcion de agregar a carrito, si no estas logueado
+
+23 ---
+cuando borro un producto de una orden de compra, pierdo el foco de los input donde ingresa el numero
+estaria bueno que se quede siempre en alguno, el primero, el anterior, o el siguiente
+si quedan items en la orden
+
+24 ---
+Tengo que terminar que cuando te logueas si tenes una orden temporal, se te asocie al usuario
+eso se continua en User/login
+
+25 ---
+tengo que arreglar en el login el mensaje de error
+
+26 ---
+Ver porque en produccion tengo problemas seteando el dominio de las sessiones 
+Hay un @todo en el bootstrap en el metodo _initConfig con un comentario relacionado
+
+27 ---
+Volver a poner bajo el nivel de errores en producción
+
+29 ---
+Cuando quise registrar a un usuario con "damian" me tiro un error online, de algo repetido, hay que investigar
+
+31 ---
+en http://www.vassilymas.com.ar/contacto
+El text area de comentarios en firefox 7 veo que el placeholder de entrada me muestra el texto desalineado, hayq eu corregir el css
+
+33 ---
+hacer que los contactos se guarden en la db
+
+34 ---
+Hay problemas con la registracion de usuario, algo paso con la verificacion de si existe o no previamente el usuario
+o la contraseña.
+
+35 ---
+Refactorear o limpiar la manera en que maneja los mensajes de error la parte de login
+
+36 ---
+Reorganizar mas correctamente las clases de My de Auth y ACL
+
+37 ---
+Modificar la ui de show-cart para que al modificar la cantidad de productos, se vea reflejado en el precio
+
+38 ---
+Hay que darle al usuario una manera mas facil de guardar sus cambios en las cantidades? lo tengo que salvar en forma
+automatica?, tengo que sacar un popup si no me confirma de alguna manera?.
+De momento se envia si compro.
+
+39 ---
+Al sumar los valores en show-cart, se deben respetar los decimales y el formato de precio
+
+40 ---
+Se deben soportar solamente numeros en los campos del show-cart
+
+41 ---
+Al remover productos del carrito, tengo que actualizar la ui para reflejar la suma total
+
+42 ---
+Corregir show-cart ya que cuando borro todos los productos, el precio total queda en .0, deberia decir 0.00
+
+43 ---
+Para mejorar la performance de show-cart voy a cargar solo los js cuando los necesito
+
+44 ---
+Hacer funcionar el registro de newsletter global
+
+45 ---
+Tengo metodos en Service_ShoppingCart q deberia pasar a la clase concreta y solo delegar
+
+46 ---
+Persistir la actualizacion de cantidad del carrito
+
+47 ---
+Hacer un popup de confirmacion
+
+48 ---
+Cuando borras productos del carrito no se actualiza el numero general de productos agregados al carrito
+en show-cart.phtml
+
+49 ---
+siendo un usuario no logueado,
+abro el sitio,
+abro otra ventana del sitio
+me logueo en la primera ventana como admin admin
+voy a la segunda ventana me intento loguear
+y veo la pantalla en blanco
+
+50 ---
+mejorar la ui de admin/subcategory/index
+
+51 ---
+El pluploader solo funciona en internet explorer
+
+52 ---
+Esta mal el path del pear en linux, ya que la carpeta esta en mayuscula, en windows.. claro... no fallo
+
+53 ---
+Si un producto esta en un orderdetail no lo puedo borrar desde el panel administrador
+
+54 ---
+Mejorar la UI de modificar subcategorias
+
+55 ---
+Mejorar la UI de agregar subcategorias
+
+56 ---
+Modificar los css de toda la administracion para q se vea parecido en todas las secciones
+
+56 ---
+Crear una tabla para configuraciones generales
+
+57 ---
+Crear paginador
+
+59 ---
+Migrar las imagenes del paginador a css sprites
+
+60 ---
+Se perfeccionaron un par de css para ie en la parte de your project
+
+61 ---
+Una vez realizado el contacto debo mostrar una pantalla de contacto realizado con exito
+archivo IndexController -> contactAction
+Migrar la creacion del contacto a la clase correspondiente dentro de IndexController, contactAction
+
+62 ---
+Migrar la creacion del contacto a la clase correspondiente dentro de IndexController, contactAction
+
+63 ---
+Se igualo un poco mas la ui de catalog, en la columna de subcategorias en ie y firefox
+
+64 ---
+La columna que contiene las imagenes del producto en el detalle, n ose ve exactamente igual en ie que en chrome
+
+65 ---
+Cuando veo el detalle de un producto
+El nombre del producto a la izquieda y la palabra descripcion a la derecha deberian estar a la misma altura
+
+66 ---
+Se ve en un lugar muy feo los mensajes de error amigables de usuario, asi como los de development
+
+67 ---
+Cambiar el nombre del metodo _clearLayout a algo mas acertado como _clearLayoutPlaceHolders
+
+68 ---
+Email Log writter, temporalmente funciona solo local
+
+69 ---
+Recuperar contraseña
+
+70 ---
+Corregir el mensaje de error de comentarios en contacto
+
+71 ---
+Corregir el placeholder en error.phtml
+
+72 ---
+Sacar el mas de detalle de producto
+
+73 ---
+Ahora los mensajes de email version texto fueron pasados a php y devuelve text/plain
+
+74 ---
+que el boton de mas, de social, hasta que no este definido lleve al home
+
+76 ---
+Cambiar la UI de recuperar contraseña para que matchee con el diseño del cliente
+
+77 ---
+Cambiar la UI de recuperar contraseña para que matchee con el diseño del cliente
+
+78 ---
+Crear sistema de layouts para emails para simplificar la creacion de nuevos emails
+
+79 ---
+cambiar la plantilla de email de recupero de contraseña en html y texto
+
+80 ---
+Que el layout de plantillas de email soporte una manera simple de indicar estilos propios
+a cada plantilla
+
+81 ---
+La plantilla de recuperar contraseña no envia el nombre correcto del usuario
+
+82 ---
+Enviar mail a usuario confirmando el cambio de la nueva contraseña
+
+83 ---
+Se corrigieron un error en personal-information.css habia mucho margen abajo de la caja principal
+
+84 ---
+url mas amigable para la confirmacion de contraseña nueva
+
+85 ---
+Cuando Un usuario quiere dejar el newsletter... puede?
+
+86 ---
+Arreglar el envio de emails desde el servidor
+
+87 ---
+Autoloader para Service_Locator
+
+88 ---
+Se modificaron un par de formularios de email version texto
+
+90 ---
+Cuando pongo mal usuario/contraseña en el login se rompe todo
+
+91 ---
+Mejorar la UI de update-persona-information
+
+92 ---
+registerAction tiene que redireccionar en success para evitar form refresh
+
+93 ---
+Comentar un poco mas el codigo
+
+94 ---
+Comenzar a investigar con gettext
+
+96 ---
+Remover el mensaje de error del form forgery ya que muestra un mensaje en ingles que no tiene sentido para el usuario
+
+98 ---
+en login.phtml hay un formulario hardcodeado
+
+99 ---
+En login, y contact-us en ingles se ve mal
+
+100 ---
+Cuando un usuario se registra sin querer el newsletter tenemos que mandarle otro mail de confirmacion que no dependa de
+mailchimp
+
+103 ---
+Enviar un mail cada vez que se modifican los datos personales
+
+104 ---
+Implementar gettext sitewide
+
+105 ---
+Implementar cache en gettext
+
+107 ---
+Buscar una manera mejor de configurar el zend mail para usar utf-8 y eleminar las funciones que puse en la clase service_Email
+
+108 ---
+Modificar la ui de newsletter, y contacto recibido
+
+109 ---
+Migrar el service locator a la libreria vassilymas
+
+110 ---
+Sigue habiendo problemas en el login en firefox con los css
+
+111 ---
+En contacto cuando entras en ingles se ve mal el boton de enviar
+
+112 ---
+El boton de mas/more se ve mal en ingles
+
+119 ---
+Se ve mal la fuente en algunas versiones de linux de firefox y chrome
+
+120 ---
+Se ve mal la fuente en el index en novedades/ofertas en firefox
+
+121 ---
+Se ven mal unos "more" en el index
+
+125 ---
+Hay algun problema con el login de usuario ,xq entro con enkil2003 y cualquier clave y me deja pasar
+
+141 ---
+Arreglar los css de contact form, en el boton de enviar

@@ -1,0 +1,26 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-21 02:05:29 -0300 (Tue, 21 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/user/personal-information.phtml $
+ * @revision - $Revision: 425 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-21 02:05:29 -0300 (Tue, 21 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('headerPromotion')->captureStart(); ?>
+<?php echo $this->menuSteps(); ?>
+<?php $this->placeholder('headerPromotion')->captureEnd(); ?>
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<section id="personalInformation">
+<?php echo $this->form; ?>
+</section>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

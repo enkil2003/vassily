@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Vassilymas" default="build" basedir="./src">
+
+    <taskdef classpath="${project.basedir}/../extended/tasks/" name="minify" classname="kpMinTask" />
+    <taskdef classpath="${project.basedir}/../extended/tasks/" name="fileSync" classname="FileSyncTask" />
+    
+    <property name="src" value="${project.basedir}" description="home for the src files" />
+    <property name="application" value="${src}/application" description="home for the src/application files" />
+    <property name="public" value="${src}/public" description="home for the src/public files" />
+    <property name="target" value="${project.basedir}/../target" description="Builded version" />
+    <property name="tmp" value="${project.basedir}/../temp/" description="Temp folder" />
+    
+    <property name="ssh.user" value="" description="Used to connect via ssh" />
+    <property name="ssh.password" value="" description="Used to connect via ssh" />
+    <property name="ssh.server" value="" description="Used to connect via ssh" />
+    
+    <fileset dir="${src}" id="source.files">
+        <include name="**/*.*" />
+        <exclude name="tareas.txt" />
+        <exclude name="ideas.txt" />
+        <exclude name="tareas-finalizadas.txt" />
+        <exclude name="logs/**" />
+        <exclude name="tests" />
+        <exclude name="tests/**" />
+        <exclude name="tests/**/**" />
+        <exclude name="docs/**/**" />
+        <exclude name="troubleshooting.txt" />
+    </fileset>
+    
+    <fileset dir="${src}" id="source.test">
+        <include name="tests/**Test.php" />
+    </fileset>
+    
+    <fileset dir="${src}" id="source.library.my">
+        <include name="library/My/**/**.php" />
+    </fileset>
+    
+    <fileset dir="${application}" id="source.files.application">
+        <include name="**/*.*" />
+        <exclude name="**/*.phtml" />
+    </fileset>
+    
+    <fileset dir="${src}" id="source.files.php">
+        <include name="**/*.php" />
+        <exclude name="docs" />
+        <exclude name="application/views/scripts/**" />
+    </fileset>
+
+    <fileset dir="${src}" id="source.files.js">
+        <include name="${public}/js/**.js"/>
+    </fileset>
+    
+    <target name="minify:js">
+        <echo>----------------------------------------</echo>
+        <echo>| Minify javascript and css to release |</echo>
+        <echo>----------------------------------------</echo>
+        <minify targetDir="${target}/public/js"
+                  yuipath="${project.basedir}/../tools/yuicompressor-2.4.6/yuicompressor-2.4.6.jar"
+                   failonerror="false">
+            <fileset dir="${public}/js">
+                <include name="**/*.js"/>
+                <include name="**/*.css"/>
+                <!-- exclude failing files -->
+                <exclude name="**/jquery.flexigrid.pack.js" />
+            </fileset>
+        </minify>
+    </target>
+    
+    <target name="minify:css">
+        <echo>----------------------------------------</echo>
+        <echo>| Minify javascript and css to release |</echo>
+        <echo>----------------------------------------</echo>
+        <minify targetDir="${target}/public/css"
+                  yuipath="${project.basedir}/../tools/yuicompressor-2.4.6/yuicompressor-2.4.6.jar"
+                   failonerror="false">
+            <fileset dir="${public}/css">
+                <include name="**/*.css"/>
+            </fileset>
+        </minify>
+    </target>
+    
+    <target name="minify" depends="minify:js, minify:css"></target>
+    
+    <target name="code-sniffer" description="Verifies coding standard">
+        <echo msg="----------------------" />
+        <echo msg="Executing Code Sniffer" />
+        <echo msg="----------------------" />
+        <phpcodesniffer standard="Zend" showWarnings="true">
+            <fileset dir="${application}">
+                <include name="**/*.php"/>
+            </fileset>
+        </phpcodesniffer>
+    </target>
+    
+    <target name="copy-source" description="Copy source files to target">
+        <echo msg="----------------------------------------" />
+        <echo msg="Copying source files to target directory" />
+        <echo msg="----------------------------------------" />
+        <mkdir dir="${target}" />
+        <copy todir="${target}" includeemptydirs="true" >
+          <fileset refid="source.files" />
+        </copy>
+        <mkdir dir="${target}/logs" />
+        <mkdir dir="${target}/logs/php" />
+        <mkdir dir="${target}/logs/apache" />
+        <mkdir dir="${target}/application/cache" />
+        <exec command="touch error.log" dir="${target}/logs/php" />
+        <exec command="chmod 777 error.log" dir="${target}/logs/php" />
+        <exec command="chmod 777 cache" dir="${target}/application" />
+    </target>
+    
+    <target name="doxygen">
+        <echo msg="------------------------" />
+        <echo msg="Documenting with Doxygen" />
+        <echo msg="------------------------" />
+        <echo msg="this may take some time with NO OUTPUT" />
+        <exec command="doxygen config.doxy" dir=".." />
+    </target>
+    
+    <property name="jquery.version" value="1.6.2" description="jQuery version" />
+    <property name="jquery.ui.version" value="1.8.15" description="jQuery UI version" />
+    <property name="source.files.jquery" value="/home/ricardo/www/libs/js/jquery/" description="jQuery folder" />
+    <property name="source.files.jquery.ui.css" value="/home/ricardo/www/libs/js/jquery/css" description="jQuery UI CSS folder" />
+    <property name="blueprint" value="/home/ricardo/www/libs/css/joshuaclayton-blueprint-css-9bf9513/blueprint" />
+    <property name="documentation.directory" value="${src}/documentation" />
+    <property name="documentation.title" value="API Documentation" />
+
+    <target name="copy-jQuery" description="Makes a copy for the local jQuery repository">
+        <echo msg="----------------------------------------" />
+        <echo msg="Copying jQuery ${jquery.version} Library" />
+        <echo msg="----------------------------------------" />
+        <mkdir dir="${target}/public/js" />    
+        <mkdir dir="${target}/public/js/jquery" />
+        <exec
+            command="cp ${source.files.jquery}/jquery-${jquery.version}.min.js 
+                     ${target}/public/js/jquery/jquery-${jquery.version}.min.js"
+        />
+    </target>
+
+    <target name="copy-custom-library" description="Makes a copy for the local jQuery repository">
+        <echo msg="----------------------" />
+        <echo msg="Copying Custom Library" />
+        <echo msg="----------------------" />
+<!--
+        <mkdir dir="${library}" />
+        <exec command="cp -r ${customLibrary.directory} ${library}" />
+-->
+    </target>
+
+    <target name="copy-blueprint" description="Makes a Blueprint copy">
+        <echo msg="-------------------------" />
+        <echo msg="Copying Blueprint Library" />
+        <echo msg="-------------------------" />
+        <mkdir dir="${target}/public/css" />
+        <exec command="cp -r ${blueprint} ${target}/public/css" />
+    </target>
+
+    <target name="copy-jQueryUI" description="Downloading jQuery Ui library">
+        <echo msg="-----------------------------" />
+        <echo msg="Copying jQuery Ui ${jquery.ui.version} Library" />
+        <echo msg="-----------------------------" />
+        <echo msg="This may take a while, please be patient..." />
+        <mkdir dir="${target}/public/js" />    
+        <mkdir dir="${target}/public/js/jquery" />
+        <exec
+            command="cp ${source.files.jquery}/jquery-ui-${jquery.ui.version}.custom.min.js 
+                     ${target}/public/js/jquery/jquery-ui-${jquery.ui.version}.custom.min.js"
+        />
+        <exec command="cp -r ${source.files.jquery.ui.css}/smoothness ${target}/public/css" />
+    </target>
+
+    <target name="PHPDoc" description="Executes PHP Documentor">
+        <echo msg="-----------------------" />
+        <echo msg="Executing PHPDocumentor" />
+        <echo msg="-----------------------" />
+        <delete dir="${documentation.directory}" includeemptydirs="true" verbose="false" failonerror="true" />
+        <mkdir dir="${documentation.directory}"/>
+        <phpdoc title="${documentation.title}" quiet="true" destdir="${documentation.directory}" sourcecode="false" output="HTML:Smarty:PHP">
+            <fileset refid="source.files.application" />
+            <projdocfileset dir=".">
+                <include name="README" />
+                <include name="INSTALL" />
+                <include name="CHANGELOG" />
+            </projdocfileset>
+       </phpdoc>
+    </target>
+
+    <target name="build"
+        depends="copy-source">
+        <delete dir="${tmp}" includeemptydirs="true" verbose="false" failonerror="true" />
+    </target>
+    
+    <property name="svn.path" value="https://subversion.assembla.com/svn/vassilymas" />
+    <property name="svn.username" value="enkil2003" />
+    <property name="svn.password" value="rb3937" />
+    <property name="svn.workingcopy" value="/home/ricardo/www/vassilymas" />
+    
+    <target name="svncommit">
+        <svncommit
+            svnpath="${svn.path}"
+            username="${svn.username}"
+            password="${svn.password}"
+            nocache="true"
+            workingcopy="${svn.workingcopy}"
+            message="{svn.message}"
+        />
+    </target>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Public targets -->
+    <target name="sync:list" description="List files">
+        <phingcall target="-sync-execute-task">
+            <property name="listonly" value="true" />
+        </phingcall>
+    </target>
+
+    <target name="sync" description="Copy files">
+        <phingcall target="-sync-execute-task">
+            <property name="listonly" value="false" />
+        </phingcall>
+    </target>
+
+    <!-- Private targets -->
+    <target name="-init" description="Load main settings">
+        <tstamp />
+        <property file="../build.properties" />
+    </target>
+
+    <target name="-sync-execute-task" depends="-init">
+        <property file="../sync.properties" />
+        <if>
+            <not>
+                <isset property="sync.verbose" />
+            </not>
+            <then>
+                <property name="sync.verbose" value="true" override="true" />
+                <echo message="The value of sync.verbose has been set to true" />
+            </then>
+        </if>
+        <property name="sync.remote.auth" value="${sync.remote.user}@${sync.remote.host}" />
+        <taskdef name="sync" classname="phing.tasks.ext.FileSyncTask" />
+        <sync
+            sourcedir="${src}"
+            destinationdir="${sync.remote.auth}:${sync.destination.projectdir}"
+            backupdir="${sync.remote.auth}:${sync.destination.backupdir}"
+            excludefile="${sync.exclude.file}"
+            listonly="${listonly}"
+            verbose="${sync.verbose}"
+        />
+    </target>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <property name="env" value="staging" override="true" description="Environment to work with" />
+    
+    <target name="deploy">
+        <echo msg="----------------------------" />
+        <echo msg="Deploying ${env} environment" />
+        <echo msg="----------------------------" />
+        <mkdir dir="${target}/public/js" />    
+        <mkdir dir="${target}/public/js/jquery" />
+        <exec command="sudo a2ensite vassilymas.${env}" dir="/etc/apache2/sites-available" />
+        <echo msg="------------------" />
+        <echo msg="Restarting apache2" />
+        <echo msg="------------------" />
+        <exec command="sudo /etc/init.d/apache2 restart" dir="." />
+    </target>
+    
+    
+    
+    
+    
+    <target name="phpunit">
+        <mkdir dir="${project.basedir}/reports/tests" />
+        <coverage-setup database="./reports/coverage.db">
+            <fileset refid="source.library.my" />
+        </coverage-setup>
+        <phpunit printsummary="true" bootstrap="${project.basedir}/tests/testHelper.php" codecoverage="true" haltonfailure="true" haltonerror="true">
+            <formatter todir="reports" type="xml"/>
+            <batchtest>
+                <fileset refid="source.test" />
+            </batchtest>
+        </phpunit>
+        <phpunitreport infile="reports/testsuites.xml" 
+            format="frames" 
+            todir="reports/tests" 
+        />
+    </target>
+    
+    <target name="quick-deploy" depends="copy-source, minify"></target>
+
+</project>

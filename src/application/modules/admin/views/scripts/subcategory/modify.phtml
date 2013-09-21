@@ -1,0 +1,37 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/modules/admin/views/scripts/subcategory/modify.phtml $
+ * @revision - $Revision: 322 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<div id="modifySubcategory">
+  <h3>Modificar Subcategoría</h3>
+  <form id="newSubcategory" method="post" action="<?php echo $this->form->getAction() ?>">
+    <div id="parentCategoryContainer">
+      <ul>
+        <li><a href="#tabs-parentCategoryContainer">Categoria padre</a></li>
+      </ul>
+      <div id="tabs-parentCategoryContainer">
+        <?php echo $this->form->getElement('category'); ?>
+        <div id="sorteableHolder">
+          <div id="info"></div>
+          <ul id="sortable"></ul>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

@@ -1,0 +1,81 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-01-03 22:48:15 -0300 (Tue, 03 Jan 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/cart/_step2.phtml $
+ * @revision - $Revision: 349 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-01-03 22:48:15 -0300 (Tue, 03 Jan 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<div class="step2Holder">
+  <?php 
+  echo $this->cartNavigation('step2');
+  ?>
+  <div class="columnA">
+    <div class="receptionSelection">
+      <?php
+      echo $this->form->getElement("reception");
+      ?>
+    </div>
+    <div class="deliveryData">
+    <?php 
+//    print_r($this->user);
+    ?>
+      <ul class="userData">
+        <li class="fullname"><?php echo "{$this->user['name']} {$this->user['lastname']}" ?></li>
+        <li class="address"><?php echo "{$this->user['address']} - {$this->user['city']}" ?></li>
+        <li class="province"><?php echo "{$this->user['province']}" ?></li>
+      </ul>
+    </div>
+    <div class="otherAddress">
+      <?php
+      echo $this->form->getElement("anotherAddress");
+      ?>
+      <ul>
+        <li id="nameField"><span class="required">*</span><input type="text" name="name" /><label for="name">Nombre</label></li>
+        <li id="lastnameField"><span class="required">*</span><input type="text" name="lastname" /><label for="lastname">Apellido</label></li>
+        <li id="emailField"><span class="required">*</span><input type="text" name="email" /><label for="email">Email</label></li>
+        <li><span class="required">*</span><input type="text" name="address" /><label for="address">Dirección</label></li>
+        <li><span class="required">*</span><input type="text" name="zip" /><label for="zip">Código postal</label></li>
+        <li><span class="required">*</span><input type="text" name="city" /><label for="city">Ciudad</label></li>
+        <li><span class="required">*</span><input type="text" name="state" /><label for="state">Provincia</label></li>
+        <li><span class="required">*</span><input type="text" name="homePhone" /><label for="homePhone">Teléfono domicilio</label></li>
+        <li><input type="text" name="celphone" /><label for="celphone">Teléfono Movil</label></li>
+        <li><textarea name="anotherAddressAditionalInfo"></textarea><label for="anotherAddressAditionalInfo">Información Adicional</label></li>
+      </ul>
+      <div class="separator"></div>
+      <h4><?php echo $this->translate("COSTO DE ENTREGA / FECHA DE ENVIO");?></h4>
+      <p class="legend"><?php echo $this->translate("A la brevedad nos pondremos en contacto para hacerte conocer el costo de envio y la fecha de entrega");?></p>
+    </div>
+  </div>
+  <div class="columnB">
+    <div class="pickup">
+     <h4><?php echo $this->translate("Por favor indique los datos de la persona que retirará la compra");?></h4>
+     <ul>
+       <li><span class="required">*</span><input type="text" name="pickupName" /><label for="pickupName">Nombre</label></li>
+       <li><span class="required">*</span><input type="text" name="pickupLastname" /><label for="pickupLastname">Apellido</label></li>
+       <li><span class="required">*</span><input type="text" name="pickupIdentification" /><label for="pickupIdentification">DNI</label></li>
+       <li><span class="required">*</span><input type="text" name="pickupPhone" /><label for="pickupPhone">Teléfono</label></li>
+       <li><textarea name="pickUpAditionalInfo"></textarea><label for="pickUpAditionalInfo">Información Adicional</label></li>
+     </ul>
+     <div class="annotations">
+       <h4>VASSILYMAS!</h4>
+       <p class="legend">Uruguay 3582 - Beccar - Pcia. de Buenos Aires</p>
+       <h4><?php echo $this->translate("FECHA DE RETIRO");?></h4>
+       <p class="legend"><?php echo $this->translate("24 horas despues de acreditada tu compra podras retirarla de nuestro local.");?></p>
+     </div>
+   </div>
+  </div>
+  <div class="step2ButtonHolder">
+    <button id="step2Button" type="button"><?php echo $this->translate("MEDIO DE PAGO");?></button>
+  </div>
+</div>

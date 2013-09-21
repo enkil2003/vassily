@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+/*if you just want to adjust the size of the stage and the thumbnails, you can do so by editing the following lines: */
+.pika-thumbs li {
+    width: 144px;
+    height: 74px;
+}
+
+.pika-stage {
+    width: 390px;
+    height: 255px;
+}
+
+.pikachoose {
+    width: 390px;
+    margin: 0 auto;
+   position: relative;
+}
+
+.pika-stage {
+    position: relative;
+}
+
+/*if you change the padding on pika-stage you must adjust the top left of this to match! */
+.pika-stage .main-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.pika-stage .pika-aniwrap {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.pika-stage .pika-ani {
+    position: relative;
+    display: none;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.pika-stage img {
+    border: 0;
+    height: 100%;
+}
+
+.pika-stage .caption {
+    position: absolute;
+    border: 1px solid #141414;
+    font-size: 11px;
+    color: #fafafa;
+    padding: 10px;
+    text-align: right;
+    bottom: 10px;
+    right: 10px;
+}
+.pika-stage .caption p {
+    padding: 0;
+    margin: 0;
+    line-height: 14px;
+}
+.pika-imgnav {
+    position: relative;
+    top: 35px;
+}
+.pika-textnav {
+    display: none;
+}
+.pika-thumbs {
+    padding: 0;
+    position: absolute;
+    top: 367px;
+    width: 400px;
+}
+.pika-thumbs li {
+    border: 1px solid #999;
+    cursor: pointer;
+    float: left;
+    height: 93px;
+    list-style-type: none;
+    margin-right: 5px;
+    width: 93px;
+}
+.pika-thumbs li:last {
+    margin: 0;
+}
+.pika-thumbs li .clip {
+    /* has ie fix */
+    position: relative;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+    overflow: hidden;
+}
+/*for the tool tips*/
+.pika-tooltip {
+    font-size: 12px;
+    position: absolute;
+    color: white;
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid black;
+}
+.pika-counter {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 11px;
+    padding: 3px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

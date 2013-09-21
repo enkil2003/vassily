@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+@CHARSET "UTF-8";
+  /* ADD PRODUCT */ 
+#productForm .ui-helper-clearfix:after {
+    clear: none;
+    content: ".";
+    display: block;
+    height: 32px;
+    visibility: hidden;
+}
+#productForm #tabContainer {
+    margin-bottom: 10px;
+}
+#productForm #tabs .subcategoriesCheckboxes {
+    display: inline-block;
+    border: 1px solid #CCC;
+    width: 180px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    border-shadow: 
+}
+#productForm #tabs .subcategoriesCheckboxes label {
+    display: block;
+}
+#productForm .formElements  {
+    margin-bottom: 10px;
+}
+#productForm .formElements label {
+    display: block;
+}
+#productForm #images {
+    clear: both;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-top: 0;
+}
+#productForm .price,
+#productForm .name,
+#productForm .width,
+#productForm .height,
+#productForm .depth {
+    display: inline-block;
+    margin-right: 10px;
+}
+#productForm .ui-tabs .ui-tabs-nav li a {
+    margin-right: 1px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+#productForm #tabs-medidas div,
+#productForm #tabs-descripcion div,
+#productForm #images div {
+    vertical-align: top;
+}
+#productForm #name,
+#productForm #price,
+#productForm #width,
+#productForm #height,
+#productForm #depth {
+    width: 237px;
+    margin-bottom: 10px;
+}
+#productForm #width,
+#productForm #height,
+#productForm #depth {
+    width: 153px;
+}
+#productForm #depth {
+    margin-left: -1px;
+}
+#productForm #messenger {
+    display: none;
+}
+#productForm .error {
+    display: none;
+}
+#productForm .imagesError {
+    margin-top: 10px;
+}
+#productForm .categoriesTab {
+    margin-bottom: 10px;
+}
+#productForm .column-id{
+    width: 30px;
+}
+#productForm .column-nombre{
+    width: 200px;
+}
+#productForm .column-descripcion {
+    width: 300px;
+}
+#productForm td.column-remove {
+    text-align: center;
+}
+#productForm td.column-remove div {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -624px;
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+#adminModifyProduct {
+    margin-top: 5px;
+}
+/* @TODO llevar esto a un lugar mas copado */ 
+#adminCrud {
+    width: 186px;
+}
+.tablesorter p {
+    margin: 0 0; 
+}
+	
+}

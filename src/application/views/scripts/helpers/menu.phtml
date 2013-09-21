@@ -1,0 +1,51 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-19 14:22:01 -0300 (Sun, 19 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/helpers/menu.phtml $
+ * @revision - $Revision: 415 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-19 14:22:01 -0300 (Sun, 19 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<menu id="menuMainCategory" class="clear">
+<?php 
+$count = count($this->categories);
+for($i=0; $i < $count; $i++):
+    $c = $this->categories[$i];
+    $last = '';
+    if($i == ($count-1)) {
+        $last = 'removeSeparator';
+    }
+?>
+  <li class="<?php echo $last; ?>">
+    <a href="/showroom/<?php echo $this->escape($c['name']); ?>"
+      class="<?php echo isset($c['class'])? $c['class']:''; ?>">
+      <?php echo $c['name']; ?>
+    </a>
+  </li>
+<?php
+endfor;
+?>
+</menu>
+<script>
+/*
+ * this is here, because, i want it to happend right after the menu is available
+ * there is a comment on file APPLICATION_PATH/views/scripts/helpers/menu.phtml
+ * about this
+ * @see http://davidwalsh.name/detect-android
+ */
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+if(isAndroid) {
+    $('#menuMainCategory li').css({'padding-left': '16px', 'padding-right': '16px'});
+}
+</script>

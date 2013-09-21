@@ -1,0 +1,49 @@
+;;;;;;;;;;;;;
+;; FIREBUG ;;
+;;;;;;;;;;;;;
+
+Save this code as an as FireBug.url in c:\Users\YOUR_USER\Favorites\FireBug.url if you want firebug in IE
+[DOC_FirebugUI]
+ORIGURL=about:blank
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=javascript:$('body').append('<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>'); void(0);
+IDList=
+IconFile=http://getfirebug.com/img/favicon.ico
+IconIndex=1
+
+
+;;;;;;;;;;;;;;;
+;; Mailchimp ;;
+;;;;;;;;;;;;;;;
+
+unique id: f376dc1bd2
+api key: c8fa89326047812e9f2b2f98fdf9f0af-us2
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ECLIPSE / ZEND STUDIO ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+It's usefull to have a external tool to build models from tables.
+To do that, just go to
+Run
+  -> External Tools
+    -> External Tool Configurations
+      -> (from the icon "filter launch configuration" UNCHECK ALL)
+      -> Mouse 2d button
+        -> New
+          -> Add a name
+          -> Location: C:\Program Files (x86)\Zend\ZendServer\bin\php.exe
+          -> Arguments: C:\Users\Ricardo\Zend\workspaces\DefaultWorkspace7\vassilymas\trunk\library\tools\doctrine\tools\generateModelsFromDB.php
+
+
+;;;;;;;;;;;;
+;; POEDIT ;;
+;;;;;;;;;;;;
+
+When configuring poedit you need to create a new catalog pointing to application folder as base
+and add . as folder.
+You also need to modify preferences and add *.php;*.phtml to php extension files,
+and last but not least change the command line to "xgettext --force-po -o %o %C %K %F -L php"

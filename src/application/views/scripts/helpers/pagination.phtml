@@ -1,0 +1,38 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/helpers/pagination.phtml $
+ * @revision - $Revision: 322 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<div class="paginatorContainer">
+<?php if ($this->pager):?>
+  <div class="header"><?php echo $this->translate('Páginas')?></div>
+  <?php 
+  $mask = $this->pager->getUrlMask();
+  $count = count($this->pager->getPagerRange()->rangeAroundPage());
+  ?>
+  <ul class="pages">
+  <?php for($i = 1; $i<=$count; $i++): ?>
+    <li<?php echo $active = $this->currentPage == $i? ' class="active"':''?>>
+    <?php if (!$active):?>
+      <a href="<?php echo str_replace('{%page_number}', $i, $mask)?>"><?php echo $i; ?></a>
+    <?php else:?>
+      <?php echo $i; ?>
+    <?php endif; ?>
+    </li>
+  <?php endfor; ?>
+  </ul>
+<?php endif; ?>
+</div>

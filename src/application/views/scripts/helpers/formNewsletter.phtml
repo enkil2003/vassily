@@ -1,0 +1,19 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * LICENSE http://www.gnu.org/licenses/gpl.txt
+ *
+ * This source file is subject to the GPL license that is bundled
+ * with this package in the file LICENSE.txt located at the docs folder.
+ *
+ * @copyright  Copyright (c) 2011 and future, Ricardo Buquet
+ * @license    http://www.gnu.org/licenses/gpl.txt     GPL  
+ */
+?>
+<form method="<?php echo $this->form->getMethod()?>" action="<?php echo $this->form->getAction()?>">
+    <?php echo $this->form->getElement('no_csrf')?>
+    <?php echo $this->form->getElement('email')?>
+    <?php echo $this->form->getElement('name')?>
+    <?php echo $this->form->getElement('submit')?>
+</form>

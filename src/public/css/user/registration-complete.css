@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+#registrationCompleteHolder fieldset {
+    border: 0;
+    color: #A70B16;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#registrationCompleteHolder fieldset div {
+    color: #444;
+}
+#catalogRightColumn {
+    border: 1px solid;
+    width: 882px;
+    padding: 14px 15px 15px;
+    border-color: #AAA;
+    margin-top: 10px;
+}

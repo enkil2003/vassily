@@ -1,0 +1,7 @@
+;;;;;;;;;;;;;;;::::
+;; Database user ::
+;;;;;;;;;;;;;;;::::
+
+CREATE USER 'vassilymas'@'localhost' IDENTIFIED BY 'qwerty';
+GRANT ALL PRIVILEGES ON vassilymas.* TO 'vassilymas'@'localhost'
+WITH GRANT OPTION;

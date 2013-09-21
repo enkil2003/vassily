@@ -1,0 +1,3 @@
+@CHARSET "UTF-8";
+/* @TODO remover este import, baja la performance */
+@import url("personal-information.css");

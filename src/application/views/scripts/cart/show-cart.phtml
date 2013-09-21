@@ -1,0 +1,51 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-01-01 08:28:17 -0300 (Sun, 01 Jan 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/cart/show-cart.phtml $
+ * @revision - $Revision: 333 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-01-01 08:28:17 -0300 (Sun, 01 Jan 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('headerPromotion')->captureStart(); ?>
+<?php echo $this->menuSteps(); ?>
+<?php $this->placeholder('headerPromotion')->captureEnd(); ?>
+
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<div style="display:none">
+  <div id="framedLoggin">
+    <p class="messageBox">Ingresa como usuario</p>
+    <ul>
+      <li><input type="text" name="usernameOrEmail" placeholder="<?php echo $this->translate('email o usuario') ?>" /></li>
+      <li><input type="password" name="password" placeholder="<?php echo $this->translate('contraseña') ?>" /></li>
+      <li><button type="button" id="ajaxLoginSubmit">Ingresar</button></li>
+    </ul>
+    <p><a href="/<?php echo $this->translate('registrate')?>">¿Aún no estas registrado?</a></p>
+    <p><a href="" id="buyAsGuest">Comprar sin registrarse</a></p>
+  </div>
+</div>
+<div class="stepsHolder">
+  <?php if (!Zend_Auth::getInstance()->hasIdentity()): ?>
+  <?php endif; ?>
+  <form method="post" id="cartForm">
+  <?php
+  echo $this->render('cart/_step1.phtml');
+  ?>
+  <?php
+  echo $this->render('cart/_step2.phtml');
+  ?>
+  <?php
+  echo $this->render('cart/_step3.phtml');
+  ?>
+  </form>
+</div>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

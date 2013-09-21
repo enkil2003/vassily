@@ -1,0 +1,25 @@
+<p>Numero de orden: <?php echo $this->orderDetails[0]['order']?></p>
+<p>Productos:</p>
+<?php
+$total = 0;
+?>
+<?php
+foreach($this->orderDetails as $product):
+    $total += $product['Products']['price'];
+?>
+<ul>
+  <li>Id: <?php echo $product['Products']['id'] ?></li>
+  <li>SKU: <?php echo $product['Products']['sku'] ?></li>
+  <li>Nombre: <?php echo $product['Products']['name'] ?></li>
+  <li>Descripción: <?php echo $product['Products']['description'] ?></li>
+  <li>Price: <?php echo $product['Products']['price'] ?></li>
+  <li>Ancho: <?php echo $product['Products']['width'] ?></li>
+  <li>Alto: <?php echo $product['Products']['height'] ?></li>
+  <li>Profundidad: <?php echo $product['Products']['depth'] ?></li>
+  <li>Materiales: <?php echo $product['Products']['materials'] ?></li>
+  <li>Imagenes: <?php echo $product['Products']['Images'][0]['name'] ?></li>
+</ul> 
+<?php 
+endforeach;
+?>
+<p>Total: <?php $total ?></p>

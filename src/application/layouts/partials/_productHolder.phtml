@@ -1,0 +1,50 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-10 21:54:55 -0300 (Fri, 10 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/layouts/partials/_productHolder.phtml $
+ * @revision - $Revision: 400 $
+ *   
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-10 21:54:55 -0300 (Fri, 10 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php
+$subcategoryName = $this->subcategoryName
+    ? $this->subcategoryName
+    : $this->product['SubcategoriesHasProducts'][0]['Subcategories']['name'];
+$subcategoryId = $this->subcategoryId
+    ? $this->subcategoryId
+    : $this->product['SubcategoriesHasProducts'][0]['Subcategories']['id'];
+    
+$href = "/showroom/{$this->categoryName}/{$subcategoryId}/"
+    . "{$subcategoryName}/{$this->product['id']}/"
+    . $this->product['name'];
+$href = str_replace(' ', '-', $href);
+?>
+<div class="span-6 product<?php echo ($this->partialCounter % 3 == 0)? ' last':''; ?>">
+  <figure class="productMargin">
+    <div class="image">
+      <a href="<?php echo $href; ?>">
+        <img src="<?php echo APPLICATION_CDN; ?>/uploads/image/<?php echo $this->product['Images'][0]['name']; ?>"
+            alt="<?php echo $this->product['name']; ?>"
+        />
+      </a>
+    </div>
+    <figcaption>
+      <p><?php echo $this->product['description']; ?></p>
+      <?php echo $this->more(
+          $href,
+          array('tag' => 'p')
+      );?>
+    </figcaption>
+  </figure>
+  <div class="clear"></div>
+</div>

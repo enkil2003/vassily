@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+.categories {
+    background-color: #FFF;
+    border: 1px solid #999;
+}
+#productGrid .product {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    display: inline-block;
+    height: 346px;
+    margin: 0 10px 0 0;
+    position: relative;
+}
+#productGrid .cycle {
+    height: 348px;
+    width: 726px;
+}
+#catalogContainer menu {
+    margin: 0;
+    padding: 0;
+}
+#productGrid .cycle .separator {
+    float: left;
+    width: 100%;
+    height: 10px;
+}
+#catalogContainer .subcategoriesMargin {
+    margin: 15px 0 10px 10px;
+}
+#catalogContainer menu li {
+    list-style: none;
+    line-height: 22px;
+    font-family: trebuc;
+}
+a.active {
+    color: #A70B16;
+}
+#catalogContainer h3 {
+    /* has firefox hack */
+    color: #A70B16;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#catalogContainer #productGrid {
+    margin-left: 198px;
+    width: 716px;
+}
+#catalogContainer .separator {
+    height: 10px;
+    display: inline-block;
+}
+#catalogContainer #subcategoriesColumn {
+    height: 756px;
+    width: 186px;
+}
+#catalogContainer .product .productMargin {
+    margin: 10px;
+}
+#catalogContainer .product .image {
+    overflow: hidden;
+    text-align: center;
+    width: 208px;
+    height: 240px;
+}
+#catalogContainer .product .more {
+    left: 169px;
+    position: absolute;
+    text-align: right;
+    top: 315px;
+    width: 49px;
+}
+.more {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+}
+.headerPromotion {
+    background-image: url("/images/header.png");
+    border: 1px solid #999999;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+@-moz-document url-prefix() {
+    /* firefox hack */
+    #catalogContainer h3 {
+        margin-bottom: 14px;
+    }
+}
+
+/* Helpers */
+.paginatorContainer {
+    border: 1px solid #999;
+    background-color: #FFF;
+    margin-left: 198px;
+    width: 704px;
+    padding: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+}
+.paginatorContainer .header {
+    display: inline-block;
+}
+.paginatorContainer .pages {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.paginatorContainer li.active {
+    color: #A70B16;
+}
+.paginatorContainer li {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -1073px; width: 38px; height: 31px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: 7px;
+    width: 38px;
+    height: 24px;
+    text-align: center;
+    margin-left: -10px;
+}
+.paginatorContainer li:first-child {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -1235px; width: 38px; height: 31px;
+    margin-left: 0;
+}
+.paginatorContainer li.active {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -1154px; width: 38px; height: 31px;
+}
+.paginatorContainer li.active:first-child {
+    background: url(/images/csg-4e877e25a9a33.png) no-repeat top left;
+    background-position: 0 -1316px; width: 38px; height: 31px;
+}

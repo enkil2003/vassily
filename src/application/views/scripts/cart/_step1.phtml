@@ -1,0 +1,74 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-01-01 02:11:07 -0300 (Sun, 01 Jan 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/cart/_step1.phtml $
+ * @revision - $Revision: 330 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-01-01 02:11:07 -0300 (Sun, 01 Jan 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<div class="step1Holder">
+  <?php 
+  echo $this->cartNavigation('step1');
+  ?>
+  <h3><?php echo $this->translate('Tu carrito contiene')?>: <span id="cartProductQuantity"><?php echo count($this->orderdetails); ?></span> <?php echo $this->translate('Productos')?></h3>
+  <p><?php echo $this->translate('Puedes quitar productos de tu carrito haciendo click en botón')?> <strong><?php echo $this->translate('Remover');?></strong> <?php echo $this->translate('de cada item')?>,<br />
+  <strong><?php echo $this->translate('Continuar Mirando')?></strong> <?php echo $this->translate('para agregar más items a tu carrito o')?> <strong><?php echo $this->translate('COMPRAR')?></strong> <?php echo $this->translate('para continuar con tu compra')?></p>
+  <table class="cartGrid">
+    <thead>
+      <tr>
+        <th class="product"><?php echo $this->translate('PRODUCTO')?></th>
+        <th class="description"><?php echo $this->translate('DESCRIPCIÓN')?></th>
+        <th class="quantity"><?php echo $this->translate('CANTIDAD')?></th>
+        <th class="price"><?php echo $this->translate('PRECIO')?></th>
+        <th class="remove">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php
+    $total = 0;
+    if ($this->orderdetails):
+    ?>
+    <?php foreach($this->orderdetails as $orderdetail):
+          $total += $orderdetail['Products']['price']*$orderdetail['quantity'];
+      ?>
+        <tr>
+          <td><img width="57" height="57" src="/uploads/thumb/<?php echo $orderdetail['Products']['Images'][0]['name']; ?>" /></td>
+          <td><?php echo $orderdetail['Products']['description']; ?></td>
+          <td>
+            <div class="inputHolder">
+            <input type="text" data-id="<?php echo $orderdetail['Products']['id']; ?>"
+              name="productId_<?php echo $orderdetail['Products']['id']; ?>"
+              value="<?php echo $orderdetail['quantity']; ?>" />
+            </div>
+          </td>
+          <td data-price="<?php echo $orderdetail['Products']['price']; ?>" class="subtotal">
+              $ <span><?php printf("%0.2f", $orderdetail['Products']['price'] * $orderdetail['quantity']); ?></span>
+          </td>
+          <td><span class="removeBtn" data-id="<?php echo $orderdetail['Products']['id']; ?>"><?php echo $this->translate('Remover')?></span></td>
+        </tr>
+      <?php endforeach;?>
+    <?php
+    endif; 
+    ?>
+    </tbody>
+  </table>
+  <button type="button" id="keepLooking"><?php echo $this->translate('Continuar mirando')?></button>
+  <div class="noteAndPrice">
+    <div class="note">
+      <p class="leyendaIva"><?php echo $this->translate('Subtotal de productos con IVA incluido')?></p>
+      <p class="leyendaEnvio"><?php echo $this->translate('No incluye costos de envio')?></p>
+    </div>
+    <div class="total">$ <span><?php printf("%0.2f", $total); ?></span></div>
+  </div>
+  <button type="button" id="buy"><?php echo $this->translate('MODO DE ENTREGA')?></button>
+</div>

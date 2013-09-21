@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+#thanksForYourContactHolder {
+    position: relative;
+}
+#thanksForYourContactHolder fieldset {
+    border: 0;
+    color: #A70B16;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#thanksForYourContactHolder fieldset div {
+    color: #444;
+}
+#headerPromotionHolders {
+    margin-bottom: 10px;
+}
+#catalogRightColumn {
+    border: 1px solid;
+    width: 882px;
+    padding: 15px;
+    border-color: #AAA;
+    margin-bottom: 10px;
+}
+#catalogContainer {
+    margin-bottom: 0px !important;
+}
+#thanksForYourContactHolder .disclaimer {
+    margin-left: 284px;
+}
+#headerPromotionHolders {
+    margin-bottom: 0;
+}
+#thanksForYourContactHolder .legend {
+    /* has ie hack */
+}

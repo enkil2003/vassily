@@ -1,0 +1,178 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/modules/admin/views/scripts/products/_productForm.phtml $
+ * @revision - $Revision: 322 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<div id="productForm">
+<form method="<?php echo $this->form->getMethod();?>"
+    action="<?php echo $this->form->getAction();?>" enctype="<?php echo $this->form->getAttrib('enctype');?>">
+<div id="messenger"></div>
+<div>
+    <?php if (count($displayGroups = $this->form->getDisplayGroups())):?>
+    <p>Indique a que subcategoría(s) pertenece el producto</p>
+    <div id="categoriesTabHolder">
+      <div class="categoriesTab">
+        <ul>
+          <?php 
+          $i = 1;
+          foreach ($displayGroups as $dg):
+            $attribs = $dg->getAttribs();?>
+            <li title="<?php echo $attribs['legend']; ?>"><a href="#tabs-<?php echo $i++;?>"><?php
+            echo (strlen($attribs['legend'])<7)? $attribs['legend']:substr($attribs['legend'], 0, 4).'...'; ?></a></li>
+          <?php 
+          endforeach;
+          ?>
+          </ul>
+        <?php 
+        $i = 1;
+        foreach ($displayGroups as $dg):?>
+          <div id="tabs-<?php echo $i++;?>">
+          <?php
+          foreach ($dg->getElements() as $element):
+            ?>
+            <div class="subcategoriesCheckboxes">
+              <div class="subcategoryCheckBoxHolder">
+              <?php
+              echo $element;
+              $this->form->removeElement($element->getName());
+              ?>
+              </div>
+            </div>
+              <?php 
+          endforeach;
+          ?>
+            </div>
+        <?php
+        $this->form->removeDisplayGroup($dg->getName());
+        endforeach;
+        ?>
+      <div   class="clear"></div>
+     </div>
+   </div>
+  <div class="subcategoriesError error"></div>
+  <p>Indique la descripción y caracteristicas del producto</p>
+  <div class="formElements">
+    <ul>
+      <li id="li-description"><a href="#tabs-descripcion">Descripción</a></li>
+      <li id="li-measures"><a href="#tabs-medidas">Medidas</a></li>
+    </ul>
+    <div id="tabs-descripcion">
+      <div class="name">
+      <?php
+      echo $this->form->getElement('name');
+      ?>
+      <div class="nameError error"></div>
+      </div>
+      <div class="price">
+      <?php
+      echo $this->form->getElement('price');
+      ?>
+      <div class="priceError error"></div>
+      </div>
+      <div>
+      <?php
+      echo $this->form->getElement('description');
+      ?>
+      </div>
+    </div>
+    <div id="tabs-medidas">
+      <div class="width">
+        <?php
+        echo $this->form->getElement('width');
+        ?>
+        <div class="widthError error"></div>
+      </div>
+      <div class="height">
+        <?php
+        echo $this->form->getElement('height');
+        ?>
+        <div class="heightError error"></div>
+      </div>
+      <div class="depth">
+        <?php
+        echo $this->form->getElement('depth');
+        ?>
+        <div class="depthError error"></div>
+      </div>
+      <div>
+        <?php
+        echo $this->form->getElement('materials');
+        ?>
+      </div>
+    </div>
+  </div>
+  <p>Asigne imagenes al producto</p>
+  <div class="images">
+    <ul>
+      <li><a href="#tabs-images">Imagenes</a></li>
+    </ul>
+    <div id="images">
+      <div id="uploader">
+        <p>Este explorador no soporta la tecnología necesaria para utilizar este componente</p>
+        <p>Le recomendamos descargue alguno de los siguientes, podrá descargarlos haciendo clíck</p>
+        <ul>
+            <li><a href="http://www.mozilla.org/es-ES/firefox/?from=getfirefox?from=getfirefox" rel="nofollow">
+              Firefox</a></li>
+            <li><a href="http://www.google.com/chrome?hl=es" rel="nofollow">Chrome</a></li>
+            <li><a href="http://www.apple.com/safari/download/" rel="nofollow">Safari</a></li>
+            <li><a href="http://windows.microsoft.com/es-ES/internet-explorer/products/ie/home"
+                rel="nofollow">Internet Explorer 9</a></li>
+        </ul>
+      </div>
+      <div id="thumbImages">
+      <?php
+      if ($this->images):
+          foreach($this->images as $image): ?>
+          <div class="imageHolder">
+            <img src="/uploads/thumb/<?php echo $image; ?>" width="100" height="100" />
+            <div data-filename="<?php echo $image; ?>"
+              data-id="<?php echo $this->form->getElement('id')->getValue(); ?>" class="remove"></div>
+          </div>
+          <?php
+          endforeach;
+      endif; ?>
+      <div class="clear"></div>
+      </div>
+      <div id="status-message"></div>
+    </div>
+  </div>
+  <div>
+  <div class="imagesError error"></div>
+    <?php
+    /* @TODO si voy a tener la idea de que cada formulario mantiene el row de un posible registro, deberia buscar
+     * una manera mas copada para imprimir el id y el submit
+     */
+    echo $this->form->getElement('id');
+    echo $this->form->getElement('submit');
+    ?>
+  </div>
+    <?php else:?>
+    <div id="parentCategoryContainer">
+      <ul>
+        <li><a href="#tabs-parentCategoryContainer">Seleccione la categoria a donde el producto pertenece</a></li>
+      </ul>
+      <div id="tabs-parentCategoryContainer">
+        <?php
+        echo $this->form->getElement('categories');
+        echo $this->form->getElement('subcategories');
+        ?>
+        <div id="gridHolder"></div>
+      </div>
+    </div>
+  <?php endif;?>
+</div>
+</form>
+</div>

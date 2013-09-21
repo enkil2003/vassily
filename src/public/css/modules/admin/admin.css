@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+#adminCrud {
+    width: 186px;
+}
+#catalogContainer #catalogRightColumn {
+    width: 690px;
+    background-color: #FFF;
+    border: 1px solid #999;
+    padding: 10px;
+    float: left;
+}

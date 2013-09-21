@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+#adminSubcategoryHolder .hide {
+    display: none;
+}
+#newSubcategory label {
+    display: block;
+}
+#adminSubcategoryHolder {
+    margin-top: 5px;
+}
+#adminSubcategoryHolder #submitContainer {
+    margin-top: 10px;
+}
+#adminSubcategoryHolder #category {
+    min-width: 194px;
+}

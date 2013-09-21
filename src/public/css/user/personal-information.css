@@ -1,0 +1,110 @@
+@CHARSET "UTF-8";
+#personalInformation {
+    position: relative;
+}
+#personalInformation .fields div div {
+    display: inline-block;
+}
+#personalInformation .requiredFields {
+    text-align: right;
+    width: 864px;
+    position: absolute;
+    top: -12px;
+}
+#personalInformation .requiredFields span.asterix {
+    color: #A70B16;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#personalInformation label {
+    font-weight: bold;
+    display: inline-block;
+    width: 290px;
+    text-align: right;
+}
+#personalInformation input[type="text"],
+#personalInformation input[type="password"] {
+    width: 250px;
+}
+#personalInformation #province {
+    /* has ie fix */
+    width: 252px;
+}
+#personalInformation fieldset.direccion {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#personalInformation .newsletter div:first-child {
+    width: 293px;
+    text-align: right;
+}
+#personalInformation .newsletter #newsletter {
+    width: 13px;
+}
+#personalInformation .newsletter label {
+    /* has ie fix */
+    margin-left: 10px;
+    text-align: left;
+    margin-top: 20px;
+    position: relative;
+    top: -2px;
+    color: #A70B16;
+}
+#personalInformation #aditionalData {
+    /* has ie fix */
+    font-size: 13px;
+    height: 100px;
+    margin-top: 5px;
+    padding-left: 0;
+    padding-top: 2px;
+    width: 245px;
+}
+#personalInformation .aditionalData div label {
+    height: 100px;
+    margin-top: 8px;
+    vertical-align: top;
+}
+#personalInformation .requiredFields span.text {
+    position: relative;
+    top: -18px;
+}
+#personalInformation fieldset {
+    border: 0;
+    color: #A70B16;
+}
+#personalInformation fieldset div {
+    color: #444;
+}
+#personalInformation .requiredMark {
+    color: #A70B16;
+    font-size: 25px;
+    line-height: 0;
+    display: inline-block;
+    margin-left: 5px;
+}
+#personalInformation .aclaration {
+    margin-left: 15px;
+}
+#personalInformation .submit {
+    float: right;
+    position: relative;
+    top: -30px
+}
+#headerPromotionHolders {
+    margin-bottom: 10px;
+}
+#catalogRightColumn {
+    border: 1px solid;
+    width: 882px;
+    padding: 15px;
+    border-color: #AAA;
+}
+#catalogContainer {
+    margin-bottom: 0px !important;
+}
+#personalInformation .error {
+    margin-left: 293px;
+    text-align: center;
+    width: 228px;
+}

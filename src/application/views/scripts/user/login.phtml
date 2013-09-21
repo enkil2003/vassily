@@ -1,0 +1,45 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-05 17:38:39 -0300 (Sun, 05 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/user/login.phtml $
+ * @revision - $Revision: 382 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-05 17:38:39 -0300 (Sun, 05 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('headerPromotion')->captureStart(); ?>
+<?php echo $this->menuSteps(); ?>
+<?php $this->placeholder('headerPromotion')->captureEnd(); ?>
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<div id="registrationAndLogin" class="<?php echo $this->form->isErrors()? 'errors':'';?>">
+  <?php
+  /* @TODO refactorizar la view, muchos hacks y posiciones relativas/absolutas me causaron problemas a la hora
+   * de mostrar el mensaje de error.
+   * Una vez arreglado eso puedo sacar esta clase errores que agrego en fieldset. Ya que es el unico lugar
+   * en la aplicacion donde lo hago, y se hace para agrandar el tamaño de la caja, ya que no lo ve bien, por los
+   * elementos con posiciones.
+   */
+  ?>
+  <fieldset id="registration">
+    <legend><?php echo $this->translate('REGISTRARSE')?></legend>
+    <h4><?php echo $this->translate('Por favor, Registrate para crear tu cuenta')?>.</h4>
+    <input type="button" value="<?php echo $this->translate('REGISTRARME')?>" name="registrarse" id="registrarse" />
+  </fieldset>
+  <div class="separator"></div>
+  <fieldset id="loginForm">
+    <legend><?php echo $this->translate('SI SOS USUARIO REGISTRADO')?></legend>
+    <?php
+    echo $this->form;
+    ?>
+  </fieldset>
+</div>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

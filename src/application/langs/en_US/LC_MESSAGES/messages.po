@@ -1,0 +1,1004 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vassilymas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-01 08:35-0300\n"
+"PO-Revision-Date: 2012-01-01 08:35-0300\n"
+"Last-Translator: Ricardo Buquet <enkil@fibertel.com.ar>\n"
+"Language-Team:  <buquet.ricardo@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate;_;gettext_noop;gettext\n"
+"X-Poedit-Basepath: C:\\Users\\Ricardo\\Zend\\workspaces\\DefaultWorkspace7\\vassilymas\\trunk\\application\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: controllers/CartController.php:44
+#: controllers/CartController.php:167
+#: controllers/UserController.php:483
+msgid "mi-carrito"
+msgstr "my-cart"
+
+#: controllers/CartController.php:64
+#: controllers/CartController.php:166
+#: controllers/UserController.php:482
+msgid "Mi Carrito"
+msgstr "My Cart"
+
+#: controllers/CartController.php:86
+msgid "pedido-realizado"
+msgstr "checkout-success"
+
+#: controllers/CartController.php:91
+msgid "dineromail"
+msgstr ""
+
+#: controllers/CartController.php:162
+#: controllers/UserController.php:29
+#: controllers/UserController.php:478
+msgid "Mi Vassilymas"
+msgstr "My Vassilymas"
+
+#: controllers/CartController.php:163
+#: controllers/UserController.php:135
+#: controllers/UserController.php:479
+msgid "mi-vassilymas"
+msgstr "my-vassilymas"
+
+#: controllers/CartController.php:170
+#: controllers/UserController.php:361
+#: controllers/UserController.php:371
+#: controllers/UserController.php:486
+msgid "Mis Datos"
+msgstr "My Personal Information"
+
+#: controllers/CartController.php:170
+#: controllers/UserController.php:61
+#: controllers/UserController.php:150
+#: controllers/UserController.php:282
+#: controllers/UserController.php:294
+#: controllers/UserController.php:486
+msgid "Registrate"
+msgstr "Register"
+
+#: controllers/CartController.php:171
+#: controllers/UserController.php:487
+msgid "mis-datos"
+msgstr "my-personal-information"
+
+#: controllers/CartController.php:171
+#: controllers/UserController.php:487
+msgid "registrate"
+msgstr "register"
+
+#: controllers/CartController.php:174
+#: controllers/UserController.php:490
+msgid "Dirección"
+msgstr "Address"
+
+#: controllers/CartController.php:178
+#: controllers/UserController.php:494
+msgid "Entrega"
+msgstr "Deliver"
+
+#: controllers/CartController.php:182
+#: controllers/UserController.php:498
+msgid "Pago"
+msgstr "Payment"
+
+#: controllers/ErrorController.php:32
+msgid "Se ha generado un error"
+msgstr "An error has been generated"
+
+#: controllers/ErrorController.php:42
+msgid "Página no encontrada"
+msgstr "Page not found"
+
+#: controllers/ErrorController.php:48
+msgid "Error en la aplicación"
+msgstr "Application error"
+
+#: controllers/IndexController.php:108
+msgid "Gracias por su contacto"
+msgstr "Thanks for your contact"
+
+#: controllers/IndexController.php:120
+msgid "Nos hicieron un contacto!!!"
+msgstr "Nos hicieron un contacto!!!"
+
+#: controllers/IndexController.php:127
+msgid "gracias-por-su-contacto"
+msgstr "thanks-for-your-contact"
+
+#: controllers/UserController.php:143
+msgid "El usuario/email y password no coinciden con ningun usuario registrado"
+msgstr "That user/email password combination doesn't match in our database"
+
+#: controllers/UserController.php:147
+msgid "INGRESAR"
+msgstr "LOG IN"
+
+#: controllers/UserController.php:182
+msgid "Credenciales incorrectas"
+msgstr "Bad credentials"
+
+#: controllers/UserController.php:210
+msgid "login"
+msgstr "login"
+
+#: controllers/UserController.php:257
+msgid "Bienvenido a Vassilymas"
+msgstr "Welcome to Vassilymas"
+
+#: controllers/UserController.php:281
+msgid "Registrarme"
+msgstr "Register"
+
+#: controllers/UserController.php:349
+msgid "datos-actualizados"
+msgstr "updated-personal-information"
+
+#: controllers/UserController.php:355
+msgid "Actualizar mis datos"
+msgstr "Update my personal information"
+
+#: controllers/UserController.php:382
+msgid "Sus datos han sido actualizados"
+msgstr "Your personal information has been updated"
+
+#: controllers/UserController.php:417
+msgid "Resetear contraseña"
+msgstr "Reset your password"
+
+#: controllers/UserController.php:421
+msgid "cambiar-contraseña"
+msgstr "change-password"
+
+#: controllers/UserController.php:433
+msgid "Recuperar contraseña"
+msgstr "Recover your password"
+
+#: controllers/UserController.php:454
+msgid "Su clave ha cambiado"
+msgstr "Your password has changed"
+
+#: forms/AddToCart.php:59
+msgid "Agregar a mi carrito"
+msgstr "Add to cart"
+
+#: forms/Checkout.php:38
+msgid "Envio a domicilio"
+msgstr "Send it to my home"
+
+#: forms/Checkout.php:39
+msgid "Retiro por sucursal"
+msgstr ""
+
+#: forms/Checkout.php:40
+msgid "Indique donde desea recibir su compra"
+msgstr ""
+
+#: forms/Checkout.php:57
+msgid "Pago a contra entrega"
+msgstr ""
+
+#: forms/Checkout.php:58
+msgid "Otros medios de pago"
+msgstr "More payment options"
+
+#: forms/Contact.php:34
+#: forms/Newsletter.php:33
+msgid "Nombre"
+msgstr "Name"
+
+#: forms/Contact.php:48
+msgid "Ingrese su nombre"
+msgstr "Provide your name"
+
+#: forms/Contact.php:57
+msgid "Apellido"
+msgstr "Lastname"
+
+#: forms/Contact.php:71
+msgid "Ingrese su apellido"
+msgstr "Provide your lastname"
+
+#: forms/Contact.php:80
+msgid "Correo electrónico"
+msgstr "Email"
+
+#: forms/Contact.php:95
+msgid "email@ejemplo.com"
+msgstr "email@example.com"
+
+#: forms/Contact.php:104
+msgid "Teléfono"
+msgstr "Phone"
+
+#: forms/Contact.php:118
+msgid "(11) 15 4555-5555"
+msgstr "(11) 15 4555-5555"
+
+#: forms/Contact.php:127
+msgid "Ciudad"
+msgstr "City"
+
+#: forms/Contact.php:141
+msgid "Ingrese su ciudad/localidad"
+msgstr "Provide your city"
+
+#: forms/Contact.php:150
+msgid "Provincia"
+msgstr "Province/State Region"
+
+#: forms/Contact.php:161
+#: forms/Contact.php:208
+msgid "Deje su comentario"
+msgstr "Leave your comment"
+
+#: forms/Contact.php:197
+msgid "Comentarios"
+msgstr "Comments"
+
+#: forms/Login.php:45
+msgid "email o usuario"
+msgstr "username or email"
+
+#: forms/Login.php:65
+msgid "contraseña"
+msgstr "password"
+
+#: forms/Newsletter.php:29
+msgid "ingrese su email"
+msgstr "provide your email"
+
+#: forms/PasswordReset.php:51
+msgid "ejemplo@dominio.com"
+msgstr "example@domain.com"
+
+#: forms/Promotions.php:45
+msgid "Banner del encabezado"
+msgstr "Header banner"
+
+#: forms/Promotions.php:46
+#: forms/Promotions.php:77
+#: forms/Promotions.php:108
+msgid "seleccione una imagen"
+msgstr "choose an image"
+
+#: forms/Promotions.php:76
+msgid "Banner de la columna izquierda"
+msgstr "Left column banner"
+
+#: forms/Promotions.php:107
+msgid "Banner de la columna derecha"
+msgstr "Right column banner"
+
+#: forms/Register.php:36
+msgid "Ingrese su nueva clave"
+msgstr "Provide your new password"
+
+#: forms/Register.php:55
+msgid "Confirme su nueva clave"
+msgstr "Confirm your new password"
+
+#: forms/Register.php:166
+msgid "Usuario"
+msgstr "Username"
+
+#: forms/Register.php:181
+msgid "Ingrese su usuario"
+msgstr "Provide your user"
+
+#: forms/Register.php:190
+msgid "Contraseña"
+msgstr "Password"
+
+#: forms/Register.php:210
+msgid "Pregunta secreta"
+msgstr "Secret question"
+
+#: forms/Register.php:230
+msgid "Respuesta secreta"
+msgstr "Secret answer"
+
+#: forms/Register.php:250
+msgid "Quiero suscribirme al Newsletter"
+msgstr "I want to subscribe to your newsletter"
+
+#: forms/Register.php:265
+msgid "Teléfono Domicilio"
+msgstr "Home Phone"
+
+#: forms/Register.php:279
+msgid "(11) 4555-5555"
+msgstr "(11) 4555-5555"
+
+#: forms/Register.php:287
+msgid "Teléfono Movil"
+msgstr "Mobil Phone"
+
+#: forms/Register.php:395
+msgid "Ingrese su dirección"
+msgstr "Provide your address"
+
+#: forms/Register.php:404
+msgid "Código Postal"
+msgstr "Zip Code"
+
+#: forms/Register.php:418
+msgid "Ingrese su código postal"
+msgstr "Provide your zip code"
+
+#: forms/Register.php:426
+msgid "Información adicional"
+msgstr "Adition information"
+
+#: forms/Subcategories.php:28
+msgid "Seleccione una categoria"
+msgstr "Select a category"
+
+#: forms/Subcategories.php:87
+msgid "ingrese el nombre"
+msgstr "provide your name"
+
+#: forms/Subcategories.php:92
+msgid "Agregar Subcategoría"
+msgstr "Add Subcategory"
+
+#: views/scripts/_email/text/password-reset.php:22
+msgid "Visita esta url para confirmar el cambio de contraseña"
+msgstr "Visit this url to confirm you password update"
+
+#: views/scripts/_email/text/password-reset.php:24
+#: views/scripts/_email/text/reset-password-confirmation.php:22
+#: views/scripts/_email/text/welcome.php:22
+#: views/scripts/_email/text/user/personal-information-has-been-updated.php:19
+msgid "Hola"
+msgstr "Hello"
+
+#: views/scripts/_email/text/password-reset.php:26
+msgid ""
+"Has solicitado un cambio de contraseña. Pero para ello requerimos tu confirmación.\n"
+"Puedes confirmar el cambio de contraseña visitando el siguiente vinculo.\n"
+"Copia y pega este vinculo en una ventana del navegador"
+msgstr ""
+"You ask for a password update. For this to be complete we need your confirmation.\n"
+"You can confirm the password update visiting the following link.\n"
+"Copy and past the link in a new browser or tab"
+
+#: views/scripts/_email/text/password-reset.php:33
+msgid "Solo tienes 24 horas para confirmar el cambio de contraseña."
+msgstr "You only have 24 hours to confirm your password update"
+
+#: views/scripts/_email/text/password-reset.php:35
+#: views/scripts/_email/text/reset-password-confirmation.php:32
+msgid "Muchas Gracias"
+msgstr "Thank you"
+
+#: views/scripts/_email/text/password-reset.php:37
+#: views/scripts/_email/text/reset-password-confirmation.php:34
+msgid "Cualquier consulta o pregunta que desees realizar, por favor, escribinos a:"
+msgstr "If you have any question, please write to:"
+
+#: views/scripts/_email/text/reset-password-confirmation.php:24
+msgid "El cambio de contraseña se ha realizado con exito"
+msgstr "Password update was successful"
+
+#: views/scripts/_email/text/reset-password-confirmation.php:26
+msgid "Esta es tu nueva contraseña"
+msgstr "This is your new password"
+
+#: views/scripts/_email/text/reset-password-confirmation.php:27
+msgid "la puedes cambiar desde el panel de usuario"
+msgstr "you can change it from the user panel"
+
+#: views/scripts/_email/text/reset-password-confirmation.php:30
+msgid "Recuerda que tu usuario es"
+msgstr "Remember that your user is"
+
+#: views/scripts/_email/text/thanks-for-your-contact.php:22
+msgid "contacto realizado"
+msgstr "contact received"
+
+#: views/scripts/_email/text/welcome.php:24
+msgid "Bienvenido a Vassilymas. Antes de poder ingresar te requerimos la confirmacion de la cuenta."
+msgstr "Welcome to Vassilymas. Before you can login, we ask you to confirm your account."
+
+#: views/scripts/_email/text/welcome.php:25
+msgid "Esto lo hacemos para que nadie pueda registrar emails no deseados."
+msgstr "This is done to avoid automatic registrations"
+
+#: views/scripts/_email/text/welcome.php:27
+msgid "Active su cuenta visitando copiando y pegando la siguiente direccion en un explorador de internet"
+msgstr "Activate your account, copy and paste the following url in a browser"
+
+#: views/scripts/_email/text/user/personal-information-has-been-updated.php:20
+msgid "Sus datos han sido actualizados con exito."
+msgstr "Your pesonal information has been succesfuly updated"
+
+#: layouts/partials/behind.phtml:20
+#: layouts/partials/behind.phtml:21
+msgid "detras del sitio"
+msgstr "behind the site"
+
+#: layouts/partials/header.phtml:24
+msgid "LOG OUT"
+msgstr "LOG OUT"
+
+#: layouts/partials/header.phtml:29
+msgid "PANEL DE CONTROL"
+msgstr "CONTROL PANEL"
+
+#: layouts/partials/header.phtml:31
+msgid "MI VASSILYMAS"
+msgstr "MY VASSILYMAS"
+
+#: layouts/partials/header.phtml:33
+msgid "LOG IN"
+msgstr "LOG IN"
+
+#: layouts/partials/header.phtml:34
+msgid "REGISTRATE"
+msgstr "REGISTER"
+
+#: layouts/partials/header.phtml:36
+msgid "MI CARRITO"
+msgstr "MY CART"
+
+#: layouts/partials/header.phtml:39
+msgid "contacto"
+msgstr "contact-us"
+
+#: layouts/partials/header.phtml:39
+msgid "CONTACTO"
+msgstr "CONTACTS"
+
+#: layouts/partials/header.phtml:40
+msgid "NEWSLETTER"
+msgstr "NEWSLETTER"
+
+#: layouts/partials/social.phtml:21
+msgid "arma vos <br /><span>tu proyecto</span><br />elegi el mueble que te<br />gusta y nosotros lo hacemos<br />como vos quieras"
+msgstr "create your<br /><span>own project</span><br />chose the furniture you<br />like and we'll make itr<br />as you like"
+
+#: layouts/partials/social.phtml:22
+msgid "mas"
+msgstr "more"
+
+#: layouts/partials/social.phtml:26
+msgid "Recibí NOVEDADES via mail"
+msgstr "Get our NEWS through your email"
+
+#: layouts/partials/social.phtml:27
+msgid "Subscribite a nuestro Newsletter y recibiras solamente<br />las fotos de los nuevos muebles que se incorporan<br />a nuestro sitio. Es una manera de estar al tanto de nuestras<br />ofertas y novedades."
+msgstr "Subscribe to our Newsletter and receive only<br />the newest furniture's pictures that we upload<br/>to our site. Is the better way to stay in touch with our<br />offers and news."
+
+#: layouts/partials/social.phtml:34
+msgid "Ingrese su email"
+msgstr "Enter your email"
+
+#: layouts/partials/social.phtml:36
+msgid "ENVIAR"
+msgstr "SEND"
+
+#: layouts/partials/social.phtml:42
+msgid "Unite a la tribu"
+msgstr "Join to the club"
+
+#: layouts/partials/_footerPromotion.phtml:22
+#: layouts/partials/_footerPromotion.phtml:34
+msgid "novedades"
+msgstr "news"
+
+#: layouts/partials/_footerPromotion.phtml:27
+msgid "Ropero provenzal compacto"
+msgstr "Ropero provenzal compacto"
+
+#: layouts/partials/_footerPromotion.phtml:39
+msgid "4 Sillas comedor punch!"
+msgstr "4 Sillas comedor punch!"
+
+#: layouts/partials/_footerPromotion.phtml:46
+msgid "oferta!!!"
+msgstr "sale!!!"
+
+#: layouts/partials/_footerPromotion.phtml:51
+msgid "Gran mueble imprentero ideal estudio!"
+msgstr "Gran mueble imprentero ideal estudio!"
+
+#: layouts/partials/_tableGenerator.phtml:25
+msgid "Eliminar"
+msgstr "Remove"
+
+#: views/scripts/cart/checkout-success.phtml:21
+#: views/scripts/cart/_step4.phtml:25
+msgid "MUCHAS GRACIAS!!"
+msgstr "THANK YOU!!"
+
+#: views/scripts/cart/checkout-success.phtml:22
+#: views/scripts/cart/_step4.phtml:26
+msgid ""
+"Hemos enviado un <span>MAIL DE CONFIRMACIÓN</span> a tu casilla de correo.<br />\n"
+"    A la brevedad un representante de Vassilymas! se pondra en contacto con vos<br />\n"
+"    para coordinar el PAGO, COSTO DE ENVIO y ENTREGA de tu compra."
+msgstr ""
+"We have sent an <span>CONFIRMATION MAIL</span> to your email address.<br />\n"
+"Soon a sale's executive will contact you<br />\n"
+"to arrange PAYMENT, TRANSPORT CHARGES and DELIVERY for your purchase."
+
+#: views/scripts/cart/checkout-success.phtml:25
+#: views/scripts/cart/_step4.phtml:29
+msgid "Si tenes alguna duda o consulta escribinos a info@vassilymas.com.ar<br />o llamanos al"
+msgstr "If you have any question, please feel free to write to info@vassilymas.com.ar<br />or give us a call at"
+
+#: views/scripts/cart/_step1.phtml:23
+msgid "Tu carrito contiene"
+msgstr "Your cart contains"
+
+#: views/scripts/cart/_step1.phtml:23
+msgid "Productos"
+msgstr "Products"
+
+#: views/scripts/cart/_step1.phtml:24
+msgid "Puedes quitar productos de tu carrito haciendo click en botón"
+msgstr "You can remove products from your cart clicking the button"
+
+#: views/scripts/cart/_step1.phtml:24
+#: views/scripts/cart/_step1.phtml:57
+msgid "Remover"
+msgstr "Remove"
+
+#: views/scripts/cart/_step1.phtml:24
+msgid "de cada item"
+msgstr "from each item"
+
+#: views/scripts/cart/_step1.phtml:25
+msgid "Continuar Mirando"
+msgstr "keep looking"
+
+#: views/scripts/cart/_step1.phtml:25
+msgid "para agregar más items a tu carrito o"
+msgstr "to add more items to your cart or"
+
+#: views/scripts/cart/_step1.phtml:25
+msgid "COMPRAR"
+msgstr "BUY"
+
+#: views/scripts/cart/_step1.phtml:25
+msgid "para continuar con tu compra"
+msgstr "to continue buying"
+
+#: views/scripts/cart/_step1.phtml:29
+msgid "PRODUCTO"
+msgstr "PRODUCT"
+
+#: views/scripts/cart/_step1.phtml:30
+msgid "DESCRIPCIÓN"
+msgstr "DESCRIPTION"
+
+#: views/scripts/cart/_step1.phtml:31
+msgid "CANTIDAD"
+msgstr "QUANTITY"
+
+#: views/scripts/cart/_step1.phtml:32
+msgid "PRECIO"
+msgstr "PRICE"
+
+#: views/scripts/cart/_step1.phtml:65
+msgid "Continuar mirando"
+msgstr "Keep looking"
+
+#: views/scripts/cart/_step1.phtml:68
+msgid "Subtotal de productos con IVA incluido"
+msgstr "Product subtotal tax included"
+
+#: views/scripts/cart/_step1.phtml:69
+msgid "No incluye costos de envio"
+msgstr "Deliver not included"
+
+#: views/scripts/cart/_step1.phtml:73
+#: views/scripts/helpers/cartNavigation.phtml:21
+msgid "MODO DE ENTREGA"
+msgstr "DELIVERY OPTIONS"
+
+#: views/scripts/cart/_step2.phtml:53
+msgid "COSTO DE ENTREGA / FECHA DE ENVIO"
+msgstr "DELIVERY  CHARGES / ARRIVAL TIME"
+
+#: views/scripts/cart/_step2.phtml:54
+msgid "A la brevedad nos pondremos en contacto para hacerte conocer el costo de envio y la fecha de entrega"
+msgstr "We will contact you soon, to confirm costs and arrival time"
+
+#: views/scripts/cart/_step2.phtml:59
+msgid "Por favor indique los datos de la persona que retirará la compra"
+msgstr "Please add some data regarding the person that wil pick up your purchase"
+
+#: views/scripts/cart/_step2.phtml:70
+msgid "FECHA DE RETIRO"
+msgstr "WHEN TO PICKUP"
+
+#: views/scripts/cart/_step2.phtml:71
+msgid "24 horas despues de acreditada tu compra podras retirarla de nuestro local."
+msgstr "24 hours later we get your founds, you could take it any time from our deposit."
+
+#: views/scripts/cart/_step2.phtml:76
+#: views/scripts/helpers/cartNavigation.phtml:22
+msgid "MEDIO DE PAGO"
+msgstr "PAYMENT OPTIONS"
+
+#: views/scripts/cart/_step3.phtml:30
+msgid "Pagas tu compra al momento de recibirla en el domicilio pactado."
+msgstr "Pay at the moment you get it."
+
+#: views/scripts/cart/_step3.phtml:31
+msgid "Recorda que el monto de tu compra NO incluye el costo de envio, que sera calculado de acuerdo a la dirección de entrega y el tamaño del/los bultos"
+msgstr "Remember that transport is not included in the price. It will be calculated based on your location, and furnitures sizes"
+
+#: views/scripts/cart/_step3.phtml:39
+msgid "CONFIRMAR COMPRA"
+msgstr "CONFIRM YOUR PURCHASE"
+
+#: views/scripts/error/error.phtml:25
+msgid "Información relacionada al error ha sido registrada y enviada al administrador para un futuro analisis"
+msgstr "Information related to the error has been registered and sent to the site administrator for proper analysis"
+
+#: views/scripts/helpers/cartNavigation.phtml:20
+msgid "CARRITO DE COMPRAS"
+msgstr "SHOPPING CART"
+
+#: views/scripts/helpers/pagination.phtml:21
+msgid "Páginas"
+msgstr "Pages"
+
+#: views/scripts/index/contact.phtml:23
+msgid "obligatorio"
+msgstr "required"
+
+#: views/scripts/index/contact.phtml:25
+#: views/scripts/index/thanks-for-your-contact.phtml:22
+msgid "FORMULARIO DE CONTACTO"
+msgstr "CONTACT FORM"
+
+#: views/scripts/index/contact.phtml:28
+msgid ""
+"Para cualquier consulta, completá el siguiente formulario.<br />\n"
+"          Por favor danos la mayor cantidad de detalles posibles<br />\n"
+"          para efectivizar la respuesta"
+msgstr ""
+"If you have any question, complete the following form.<br />\n"
+"Please give us the more details as possible<br />\n"
+"To give you a proper answer"
+
+#: views/scripts/index/contact.phtml:39
+msgid "Debe ingresar un nombre valido"
+msgstr "You must supply a valid name"
+
+#: views/scripts/index/contact.phtml:47
+msgid "Debe ingresar un apellido valido"
+msgstr "You must supply a valid lastname"
+
+#: views/scripts/index/contact.phtml:55
+msgid "Debe ingresar un email valido"
+msgstr "You must supply a valid email"
+
+#: views/scripts/index/contact.phtml:63
+msgid "Debe ingresar un telefono valido"
+msgstr "You must supply a valid phone"
+
+#: views/scripts/index/contact.phtml:71
+msgid "Debe ingresar una ciudad valida"
+msgstr "You must supply a valid city"
+
+#: views/scripts/index/contact.phtml:84
+msgid "Debe ingresar un comentario"
+msgstr "You must supply a valid comment"
+
+#: views/scripts/index/newsletter.phtml:22
+msgid "SUSCRIBITE AL NEWSLETTER"
+msgstr "SUBSCRIBE TO OUR NEWSLETTER"
+
+#: views/scripts/index/success.phtml:20
+msgid "Usuario agregado con exito"
+msgstr "Used successfuly added"
+
+#: views/scripts/index/test.phtml:35
+msgid "Su explorador no soporta Flash, Silverlight, Gears, BrowserPlus o HTML5"
+msgstr "Your browser doesn't support Flash, Silverlight, Gears, BrowserPlus or HTML5"
+
+#: views/scripts/index/test.phtml:78
+msgid "Debe al menos seleccionar una imagen"
+msgstr "You must supply at least one image"
+
+#: views/scripts/index/thanks-for-your-contact.phtml:24
+msgid "Tu consulta ha sido enviada con exito!"
+msgstr "Your contact has been sent!"
+
+#: views/scripts/index/thanks-for-your-contact.phtml:25
+msgid "A la brevedad nos pondremos en contacto."
+msgstr "We will contact you as soon as possible"
+
+#: views/scripts/product/index.phtml:44
+msgid "Descripción"
+msgstr "Description"
+
+#: views/scripts/product/index.phtml:46
+msgid "Medidas"
+msgstr "Sizes"
+
+#: views/scripts/product/index.phtml:47
+msgid "Ancho"
+msgstr "Width"
+
+#: views/scripts/product/index.phtml:48
+msgid "Alto"
+msgstr "Height"
+
+#: views/scripts/product/index.phtml:49
+msgid "Profundidad"
+msgstr "Depth"
+
+#: views/scripts/product/index.phtml:50
+msgid "Materiales"
+msgstr "Materials"
+
+#: views/scripts/product/index.phtml:53
+msgid "Precio"
+msgstr "Price"
+
+#: views/scripts/user/confirmation.phtml:24
+msgid "Su usuario ha sido confirmado, puede proceder a loguearse"
+msgstr "You user has been confirmed, you can login now"
+
+#: views/scripts/user/login.phtml:33
+msgid "REGISTRARSE"
+msgstr "REGISTER"
+
+#: views/scripts/user/login.phtml:34
+msgid "Por favor, Registrate para crear tu cuenta"
+msgstr "Please, register to get an account"
+
+#: views/scripts/user/login.phtml:35
+msgid "REGISTRARME"
+msgstr "REGISTER"
+
+#: views/scripts/user/login.phtml:39
+msgid "SI SOS USUARIO REGISTRADO"
+msgstr "IF YOU ARE A REGISTERED USER"
+
+#: views/scripts/user/login.phtml:45
+msgid "Usuario o email"
+msgstr "Username or email"
+
+#: views/scripts/user/login.phtml:61
+msgid "olvide-mi-contraseña"
+msgstr "foget-my-password"
+
+#: views/scripts/user/login.phtml:61
+msgid "Olvide mi contraseña"
+msgstr "Forget my password"
+
+#: views/scripts/user/password-reset-mail-sent.phtml:22
+#: views/scripts/user/password-reset.phtml:24
+#: views/scripts/user/reset-password-confirmation.phtml:22
+msgid "OLVIDE MI CONTRASEÑA"
+msgstr "FORGET MY PASSWORD"
+
+#: views/scripts/user/password-reset-mail-sent.phtml:25
+msgid "Recibiras un email en tu casilla de correo"
+msgstr "You will receive an email to your supplied email address"
+
+#: views/scripts/user/password-reset-mail-sent.phtml:26
+msgid "En el mismo, encontraras un vinculo, clickealo para activar la nueva contraseña"
+msgstr "There, you will find a link, click it to activate your new password"
+
+#: views/scripts/user/password-reset-mail-sent.phtml:28
+msgid "Este vinculo tiene validez solo por 24 horas"
+msgstr "That link is only valid for the news 24 hours"
+
+#: views/scripts/user/password-reset.phtml:27
+msgid "Ingresá tu dirección de correo eletrónico y clickea continuar"
+msgstr "Provide your email address and click continue"
+
+#: views/scripts/user/password-reset.phtml:36
+msgid "Ese email no se encuentra asociado a ningun usuario registrado"
+msgstr "That email is not in our user's database"
+
+#: views/scripts/user/registration-complete.phtml:27
+msgid "Su registración ha sido exitosa, y deberá ser confirmada"
+msgstr "Your registration was successful, and must be confirmed"
+
+#: views/scripts/user/registration-complete.phtml:28
+msgid "Por favor confirme su registración visitando el vinculo que le hemos enviado por email"
+msgstr "Please confirm your registration visiting the link that we sent to your email"
+
+#: views/scripts/user/reset-password-confirmation.phtml:24
+msgid "Su clave ha sido reseteada, esta es su nueva contraseña"
+msgstr "You password has been reset, this is your new password"
+
+#: views/scripts/user/reset-password-confirmation.phtml:26
+msgid "Solo tienes 24 horas para confirmar tu nueva contraseña"
+msgstr "You only have 24 hours to confirm your password update"
+
+#: views/scripts/user/reset-password-confirmation.phtml:27
+msgid "Volvé a intentarlo haciendo"
+msgstr "Try it again doing"
+
+#: views/scripts/user/reset-password-confirmation.phtml:27
+msgid "click aquí"
+msgstr "click here"
+
+#: views/scripts/user/success.phtml:20
+msgid "Un email de confirmacion ha sido enviado a su casilla de correo"
+msgstr "A confirmation email has been sent to your supplied email"
+
+#: views/scripts/user/success.phtml:21
+msgid "Antes de proseguir, debera confirmar la misma"
+msgstr "Before continue, you must confirm it"
+
+#: views/scripts/user/success.phtml:22
+msgid ""
+"Una vez completado el proceso de registro, podra hacer uso completo de nuestro sitio\n"
+"y recibir el newsletter si asi lo ha indicado"
+msgstr ""
+"Once the registration process is complete, you will have full access to our site\n"
+"and receive our newsletter if you asked to"
+
+#: views/scripts/user/update-personal-information-success.phtml:25
+#: views/scripts/user/_register.phtml:25
+msgid "DATOS PERSONALES"
+msgstr "PERSONAL INFORMATION"
+
+#: views/scripts/user/update-personal-information-success.phtml:27
+msgid "Su datos han sido modificados con exito"
+msgstr "Your personal information has been successfuly modified"
+
+#: views/scripts/user/user-already-logged-in.phtml:20
+msgid "Un usuario ya se encuentra activo en esta sesión"
+msgstr "An user is already active for this session"
+
+#: views/scripts/user/user-already-logged-in.phtml:21
+msgid "¿Desea ingresar como otro usuario?"
+msgstr "Do you want to login as another user?"
+
+#: views/scripts/user/_register.phtml:56
+msgid "Ese email ya pertenece a un usuario"
+msgstr "That emails already belongs to a registered user"
+
+#: views/scripts/user/_register.phtml:83
+msgid "Ese nombre de usuario ya existe"
+msgstr "The user already exists"
+
+#: views/scripts/user/_register.phtml:90
+msgid "Debe ingresar un usuario valido"
+msgstr "You must supply a valid user"
+
+#: views/scripts/user/_register.phtml:102
+#: views/scripts/user/_register.phtml:118
+#: views/scripts/user/_register.phtml:127
+#: views/scripts/user/_register.phtml:139
+#: views/scripts/user/_register.phtml:152
+msgid "5 caracteres como minimo"
+msgstr "5 characters as minimun"
+
+#: views/scripts/user/_register.phtml:105
+#: views/scripts/user/_register.phtml:121
+#: views/scripts/user/_register.phtml:130
+msgid "Debe ingresar un password valido"
+msgstr "You must supply a valid password"
+
+#: views/scripts/user/_register.phtml:142
+msgid "Debe ingresar una pregunta valida"
+msgstr "You must supply a secret question"
+
+#: views/scripts/user/_register.phtml:155
+msgid "Debe ingresar una respuesta valida"
+msgstr "You must supply a answer"
+
+#: views/scripts/user/_register.phtml:169
+msgid "DIRECCIÓN"
+msgstr "ADDRESS"
+
+#: views/scripts/user/_register.phtml:185
+msgid "Debe ingresar un código postal valido"
+msgstr "You must supply a valid zip code"
+
+#: views/scripts/user/_register.phtml:201
+msgid "Debe ingresar una provincia valida"
+msgstr "You must supply a valid province/state or region"
+
+#: views/scripts/user/_register.phtml:217
+msgid "Debe ingresar un telefono celular valido"
+msgstr "You must supply a valid phone"
+
+#: views/scripts/_email/html/layout.phtml:106
+msgid ""
+"Cualquier consulta o pregunta que desees realizar,\n"
+"              por favor, escribinos a:"
+msgstr ""
+"If you have any question for us,\n"
+"              please, write to:"
+
+#: views/scripts/_email/html/password-reset.phtml:20
+msgid "Has solicitado un cambio de contrase&ntilde;a. Pero para ello requerimos tu confirmaci&oacute;n."
+msgstr "You have asked to update your password. For this to be complete, we need your confirmation."
+
+#: views/scripts/_email/html/password-reset.phtml:21
+msgid "Puedes confirmar el cambio de contrase&ntilde;a haciendo "
+msgstr "You can confirm you password update doing "
+
+#: views/scripts/_email/html/password-reset.phtml:22
+msgid "click aqu&iacute; - Confirmar cambio de contrase&ntilde;a"
+msgstr "click here - Confirm password update"
+
+#: views/scripts/_email/html/password-reset.phtml:24
+msgid "Solo tienes 24 horas para confirmar el cambio de contrase&ntilde;a."
+msgstr "You only have 24 hours to confirm your password update."
+
+#: views/scripts/_email/html/reset-password-confirmation.phtml:20
+msgid "El cambio de contrase&ntilde;a se ha realizado con exito"
+msgstr "The password update was successful"
+
+#: views/scripts/_email/html/reset-password-confirmation.phtml:21
+msgid "Esta es tu nueva contrase&ntilde;a"
+msgstr "This is you new password"
+
+#: views/scripts/_email/html/reset-password-confirmation.phtml:22
+msgid "la puedes cambiar desde el"
+msgstr "you can change it from the"
+
+#: views/scripts/_email/html/reset-password-confirmation.phtml:23
+msgid "panel de usuario"
+msgstr "user panel"
+
+#: views/scripts/_email/html/welcome.phtml:20
+msgid "Bienvenido a Vassilymas. Antes de poder ingresar te requerimos la confirmacion de la cuenta.<br />Esto lo hacemos para que nadie pueda registrar emails no deseados."
+msgstr "Welcome to Vassilymas. Before you can login, we ask you to confirm your account<br />We do this, to avoid automatic registration"
+
+#: views/scripts/_email/html/welcome.phtml:21
+msgid "Active su cuenta haciendo click aquí"
+msgstr "Activate your account clicking here"
+
+#~ msgid "ACCEDER"
+#~ msgstr "LOGIN"
+
+#~ msgid "Si Desea recibir su compra en otra dirección por favor indiquela"
+#~ msgstr "If you want to change your location, please specify it"
+
+#~ msgid "Debajo de cada opción veras el tiempo de acreditación de cada uno"
+#~ msgstr ""
+#~ "Under each option, you can see the acreditation time for each payment "
+#~ "option"
+
+#~ msgid "CONFIRMACIÓN"
+#~ msgstr "CONFIRMATION"
+
+#~ msgid "registracion-exitosa"
+#~ msgstr "registration-success"
+
+#~ msgid "Resetear credenciales"
+#~ msgstr "Reset credentials"
+
+#~ msgid "cambiar-de-credenciales"
+#~ msgstr "change-credentials"
+
+#~ msgid "ingrese un nombre"
+#~ msgstr "provide your name"
+
+#~ msgid "ingrese un precio"
+#~ msgstr "provide a price"
+
+#~ msgid "ingrese medidas"
+#~ msgstr "provide dimentions"
+
+#~ msgid "Primero debe seleccionar una categoria"
+#~ msgstr "First you must select a category"
+
+#~ msgid "CONSULTAS"
+#~ msgstr "CONTACTS"
+
+#~ msgid "newsletter"
+#~ msgstr "newsletter"

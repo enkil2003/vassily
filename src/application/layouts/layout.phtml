@@ -1,0 +1,112 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-02-26 16:55:16 -0300 (Sun, 26 Feb 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/layouts/layout.phtml $
+ * @revision - $Revision: 435 $
+ *   
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-02-26 16:55:16 -0300 (Sun, 26 Feb 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php
+echo $this->doctype();
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<?php echo $this->headTitle() . PHP_EOL ?>
+<?php echo $this->headMeta() . PHP_EOL ?>
+<?php echo $this->headStyle()?>
+<?php echo $this->headLink() . PHP_EOL?>
+<?php /* @TODO tengo q hacer algo con esto js cargados en forma manual */ ?>
+<link href="<?php echo APPLICATION_CDN; ?>/css/layout.css" media="all" rel="stylesheet" type="text/css" >
+<style type="text/css">
+@font-face {
+    font-family: 'trebuc';
+    src: url(/css/fonts/trebuc.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'trebucbd';
+    src: url(/css/fonts/trebucbd.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+</style>
+<?php 
+echo $this->minifyHeadScript()
+//    ;?>
+<!-- ConfigJs -->
+<?php
+echo $this->configJs();
+?>
+<!-- End ConfigJs -->
+</head>
+<body>
+<?php echo $this->facebookButtons()->javascriptSDK(); ?>
+<?php echo $this->partial('partials/behind.phtml'); ?>
+<?php echo $this->layout()->content; ?>
+<div class="container">
+  <?php
+  echo $this->partial('partials/header.phtml');
+  ?>
+  <div class="greyArea">
+    <div id="pageMainContent" class="span-24 last">
+      <?php 
+      echo $this->placeholder('genericErrorMessage');
+      ?>
+      <div id="headerPromotionHolders">
+      <?php 
+      echo $this->placeholder('headerPromotion');
+      ?>
+      </div>
+      <section id="catalogContainer">
+        <div id="catalogLeftColumn">
+        <?php 
+        echo $this->placeholder('catalogLeftColumn');
+        ?>
+        </div>
+        <div id="catalogRightColumn">
+        <?php
+        echo $this->placeholder('catalog');
+        ?>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <?php 
+      echo $this->placeholder('admin');
+      ?>
+      <?php
+      echo $this->placeholder('social');
+      ?>
+      <?php 
+      echo $this->placeholder('footerPromotion');
+      ?>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+<?php echo $this->headScript() . PHP_EOL ?>
+<?php
+echo $this->minifyFooterScript()
+    ->prependFile('/js/jquery/jquery-1.6.2.min.js')
+    ->prependFile('/js/modernizr/modernizr-2.0.6.custom.min.js')
+    ->appendFile("/js/jquery/plugins/jquery.equal-height-columns.js")
+    ->appendFile("/js/jquery/plugins/jquery.vAlign.js")
+    ->appendFile("/js/layout.js")
+;
+?>
+<?php echo $this->inlineScript() . PHP_EOL ?>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/modules/admin/views/scripts/subcategory/index.phtml $
+ * @revision - $Revision: 322 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php $this->placeholder('catalog')->captureStart(); ?>
+<div id="adminSubcategoryHolder">
+  <div id="formMessenger"></div>
+  <h3>Agregar Subcategoría</h3>
+  <form id="newSubcategory" method="post" action="<?php echo $this->form->getAction() ?>">
+    <div id="parentCategoryContainer">
+      <ul>
+        <li><a href="#tabs-parentCategoryContainer">Categoria padre</a></li>
+      </ul>
+      <div id="tabs-parentCategoryContainer">
+        <label for="name">Indique a que categoría pertenece la nueva subcategoría</label>
+        <?php echo $this->form->getElement('category'); ?>
+        <div id="subcategoryContainer" class="<?php echo !$this->form->getElement('name')->hasErrors()? 'hide':''; ?>">
+          <label for="name">Nombre de subcategoría</label>
+          <?php echo $this->form->getElement('name'); ?>
+          <div id="nameError" class="error <?php echo !$this->form->getElement('name')->hasErrors()? 'hide':''; ?> ">Ingrese un nombre valido</div>
+        </div>
+      </div>
+    </div>
+    <div id="submitContainer" class="<?php echo !$this->form->getElement('name')->hasErrors()? 'hide':''; ?>">
+      <?php echo $this->form->getElement('submit'); ?>
+    </div>
+  </form>
+</div>
+<?php $this->placeholder('catalog')->captureEnd(); ?>

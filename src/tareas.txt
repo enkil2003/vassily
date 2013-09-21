@@ -1,0 +1,133 @@
+Numero[.indice] --- [Relacion a idea]
+
+3 ---
+Login por facebook
+twitter
+DWG Blog
+
+4.2 ---
+Buscar una manera de tener archivos minificados en produccion y full en development
+
+5.2:5.1 ---
+El problema con las fuentes, es que al cargar el layout.css desde el cdn, busca las imagenes relativas a la carpeta de css
+lo extraño es que estan ahi, pero se ve que cuando las busca por otro dominio no las trae.
+Mas raro es que a veces si las trae, lo que se me ocurre es que sean temas de politicas de carga.
+Como tiene el javascript con crossdomain
+La solucion temporal fue poner las 2 reglas de definicion de fonts directos en el layout
+
+18 ---
+modificar los labels de los forms de registracion y modificar datos para que no sean clickeables por el for="name"
+y activos en todo el renglon
+
+creo 2 subcategorias
+meto un producto en las 2 subcategorias, guardo su id
+borro las 2 subcategorias
+puedo seguir viendo el producto por id
+
+cuando editas con jeditor te pone el cursor al principio por ahi es mas comodo que vaya al final
+o que quede la palabra seleccionada
+
+24 ---
+las reglas de menu steps estan en el layout, por ahi cargarse solo cuando se carga el menu steps
+
+28 ---
+En UserController tuve que agregar que poner esta linea, sino no autenticaba el servidor, pero localmente no lo necesitaba
+llegue por casualidad a esta linea mirando como autentica el zend_auth::authenticate
+
+30 ---
+hice un hack (mas!!) en login, esta documentado, hay que reveer toda la maquetacion y css
+
+31.2 ---
+Los formularios de register y contact no se ven igual en IE
+
+58 ---
+Como usuario agrego un producto al carrito en un explorador
+En otro explorador voy como administrador y borro ese producto
+Vuelvo al explorador del usuario, voy a mi carrito, o refresco si ya estaba
+y veo como pierdo el producto.
+Los productos no deberian borrarse, sino deshabilitarse
+
+75 ---
+http://www.vassilymas.local/registrate
+las preguntas secreatas tienen restricciones en la vista al menos, que no corresponden
+
+77 ---
+Implementar placeholder para passwords aca hay varios plugins
+http://plugins.jquery.com/plugin-tags/placeholder?page=1 
+
+89 ---
+Validar el formulario de personal information
+
+95 ---
+En el archivo social.phtml, estoy haciendo un formulario a mano, hay que cambiarlo
+
+97 ---
+Con los formularios algunos labels estan puestos en el Form_* y otros en los phtml, normalizar
+
+101 ---
+Verificar si hay una forma de traducir los mails que envia mailchimp cuando confirmas el subscripcion al newsletter
+
+102 ---
+En la version local no funciona la confirmacion una vez que te registras y queres el newsletter
+
+106 ---
+password-reset-mail-sent tengo que hacer un reenvio en lugar de renderear otro phtml para evitar refresh del form
+
+113 ---
+pasar el formulario de steps de checkout a zend form
+
+114 ---
+Refactorizar los forms para que utilicen jquery validate
+
+115 ---
+Modificar los helpers de zend para que agreguen autovalidacion
+
+116 ---
+Cuando entras al carrito sin productos, ves todos los pasos con alpha 1
+
+117 ---
+Ingreso al sitio como un usuario guest
+agrego un producto al carrito
+entonces veo el carrito
+clickeo en modo de entrega
+marco desea recibir en otra direccion
+pongo un dato invalido
+clickeo en  envio a domicilio
+
+error: sigo viendo el mensaje de error del dato invalido de entraga a domicilio
+
+118 ---
+Cuando hago un contacto me queda guardado el cross forgery
+
+122 ---
+Cambiar los nombres de las imagenes, a numericos, o al menos comenzar con un prefijo numerico
+que luego pueda incrementar.
+EN principio tengo que tener cuidado que no me cambie el orden de las imagenes actuales del sprite
+
+123 ---
+En el archivo _step1.phtml r330 linea 45 esta hardcodeada el tamaño de la imagen en el carrito.
+La imagen esta viniendo mas grande, tengo q tener otro thumb posiblemente
+
+124 ---
+No veo los mensajes de error al loguearme en firefox windows fue probado
+
+126 ---
+En login page se ve mal el boton de registrarme e ingresar en firefox en linux
+
+127 ---
+Faltan traducciones en _step2.phtml, hay q revisar los otros tambien
+
+128 ---
+Falta validar nombre, apellido e email de los step de checkout
+
+129 ---
+cambiar el nombre de pedido-realizado que esta hardcodeado
+
+130 ---
+terminar la interface de My_ShoppingCart_Order_Interface
+
+131 ---
+Revisar si puedo borrar el contenido del archivo troubleshooting
+
+132 ---
+revisar el registration y la modificacion de datos

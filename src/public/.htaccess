@@ -1,0 +1,32 @@
+RewriteEngine On
+ExpiresActive On
+
+RewriteCond %{HTTP_HOST} ^vassilymas\.local$ [NC]
+RewriteRule ^(.*)$ http://www.vassilymas.local/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} ^vassilymas\.com.ar$ [NC]
+#RewriteRule ^(.*)$ http://www.vassilymas.com.ar/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+Header unset ETag
+FileETag None
+
+<FilesMatch "\.(php|html|js|css)$">
+  SetOutputFilter DEFLATE
+  AddOutputFilterByType DEFLATE text/html
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</FilesMatch>
+
+<FilesMatch "\.(php|html|ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+  Header set Expires "1 year"
+  #ExpiresDefault "access plus 365 days" # esto lo tuve que usar en mowema (el servidor)
+</FilesMatch>
+
+# si php no esta cargado como fast-cgi puedo habilitar esto desde aca en lugar de php.ini
+# php_flag zlib.output_compression on

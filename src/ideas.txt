@@ -1,0 +1,53 @@
+Numero[.indice] --- [Relacion a tarea]
+
+1 ---
+guardar los mails en la base de datos y que se puedan responder desde el panel administrador,
+asi respondes con el formato que se me cante y se pueden hasta incluir archivos usando el pluploader
+el dia de mañana en los mails que se encian al usuario se pueden enviar tambien publicidad desd e oferta
+
+2 ---
+agregar addwords
+
+3 ---
+usar redmine para trackear tareas o trac
+
+5 ---
+agregar en el panel administrador algo para que yo pueda ofrecerles modulos o inclusive instalarselos por un tiempo
+determinado y si les gusta me lo compran por paypal
+
+6 ---
+la forma en la que se achican las imagenes esta completamente pegada a este sistema, habria que abstrarse un poco
+sobre wideimage y armarme una facade para acceder facil a los metodos y poder aplicarlo en cambios del diseño u otros
+lugares donde requiera cambiar tamaños de imagenes
+
+9 ---
+quiero hacer que no esten tan apegados los cambios de nombre de una accion, me molesta
+tener que cambiar los nombres de default css y default js en cadena
+
+sistema de tracking de mas visitados
+
+10 ---
+Cuando asignas las subcategorias al producto, si no estas parado en la solapa correspondiente a la categoria no te das
+cuenta en cuales esta esto es problematico al momento de actualizar.
+Deberia tener una lista que aparezca en algun otro lado indicando en cuales se encuentra
+
+
+32 ---
+Cuando se hace un contacto y no esta logueado, puedo ver si el mail corresponde a un usuario y asociarlo,
+pensar esto, q ventajas tiene?
+tener un historial de todos mis contactos?
+contras?
+si yo entro y mando contacto a nombre de otro?
+
+
+Podria optimizar un poco como cargo el sprite
+desde el punto de vista del css, yo lo estoy incluyendo en las clases ej:
+background: url(csg-4efbf8d15f124.png) no-repeat top left;
+
+tambien podria tener una clase
+.backgroundX {
+    background: url(csg-4efbf8d15f124.png) no-repeat top left;
+}
+
+y la aplico, asi despues si cambio el nombre de la imagen, lo cambio en un solo lado
+y a la larga ahorro bites con class="backgroundX"

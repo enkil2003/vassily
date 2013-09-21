@@ -1,0 +1,593 @@
+Category:
+  connection: 0
+  tableName: category
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    order:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Subcategories:
+      local: id
+      foreign: category
+      type: many
+Configuration:
+  connection: 0
+  tableName: configuration
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    resource:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    key:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    value:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+Contact:
+  connection: 0
+  tableName: contact
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      type: one
+    Contactdata:
+      local: id
+      foreign: contact_id
+      type: many
+Contactdata:
+  connection: 0
+  tableName: contactdata
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    contact_id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: false
+    field:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    value:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Contact:
+      local: contact_id
+      foreign: id
+      type: one
+Images:
+  connection: 0
+  tableName: images
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    products_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Products:
+      local: products_id
+      foreign: id
+      type: one
+Orderdetail:
+  connection: 0
+  tableName: orderdetail
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    product:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    order:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: false
+    price:
+      type: float(15)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: true
+      autoincrement: false
+    quantity:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '1'
+      notnull: true
+      autoincrement: false
+    sku:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Orders:
+      local: order
+      foreign: id
+      type: one
+    Products:
+      local: product
+      foreign: id
+      type: one
+Orders:
+  connection: 0
+  tableName: orders
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    ordernumber:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    User:
+      local: user
+      foreign: id
+      type: one
+    Orderdetail:
+      local: id
+      foreign: order
+      type: many
+Privilege:
+  connection: 0
+  tableName: privilege
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    rol:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: false
+    resource:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+  relations:
+    Resource:
+      local: resource
+      foreign: id
+      type: one
+    Rol:
+      local: rol
+      foreign: id
+      type: one
+Products:
+  connection: 0
+  tableName: products
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    sku:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    price:
+      type: float(15)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    width:
+      type: float(15)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0.00'
+      notnull: false
+      autoincrement: false
+    height:
+      type: float(15)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0.00'
+      notnull: false
+      autoincrement: false
+    depth:
+      type: float(15)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0.00'
+      notnull: false
+      autoincrement: false
+    materials:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Images:
+      local: id
+      foreign: products_id
+      type: many
+    Orderdetail:
+      local: id
+      foreign: product
+      type: many
+    SubcategoriesHasProducts:
+      local: id
+      foreign: products_id
+      type: many
+Resource:
+  connection: 0
+  tableName: resource
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    resource:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Privilege:
+      local: id
+      foreign: resource
+      type: many
+Rol:
+  connection: 0
+  tableName: rol
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    rol:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    inherit:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Rol:
+      local: id
+      foreign: inherit
+      type: many
+    Privilege:
+      local: id
+      foreign: rol
+      type: many
+    User:
+      local: id
+      foreign: rol
+      type: many
+Subcategories:
+  connection: 0
+  tableName: subcategories
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    category:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    order:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Category:
+      local: category
+      foreign: id
+      type: one
+    SubcategoriesHasProducts:
+      local: id
+      foreign: subcategories_id
+      type: many
+SubcategoriesHasProducts:
+  connection: 0
+  tableName: subcategories_has_products
+  columns:
+    subcategories_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    products_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+  relations:
+    Subcategories:
+      local: subcategories_id
+      foreign: id
+      type: one
+    Products:
+      local: products_id
+      foreign: id
+      type: one
+User:
+  connection: 0
+  tableName: user
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    rol:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: false
+    username:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    email:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    password:
+      type: string(32)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    confirmation_code:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0'
+      notnull: true
+      autoincrement: false
+    active:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0'
+      notnull: true
+      autoincrement: false
+    reset_code:
+      type: string(32)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    timestamp_reset_code:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Rol:
+      local: rol
+      foreign: id
+      type: one
+    Contact:
+      local: id
+      foreign: user_id
+      type: many
+    Orders:
+      local: id
+      foreign: user
+      type: many
+    Userdata:
+      local: id
+      foreign: user
+      type: many
+Userdata:
+  connection: 0
+  tableName: userdata
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    user:
+      type: integer(4)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: false
+    field:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    value:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    User:
+      local: user
+      foreign: id
+      type: one

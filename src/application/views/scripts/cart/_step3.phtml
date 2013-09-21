@@ -1,0 +1,40 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-01-01 02:11:07 -0300 (Sun, 01 Jan 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/views/scripts/cart/_step3.phtml $
+ * @revision - $Revision: 330 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-01-01 02:11:07 -0300 (Sun, 01 Jan 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<div class="step3Holder">
+  <div class="receptionSelection">
+    <?php 
+    echo $this->cartNavigation('step3');
+    ?>
+    <?php
+    echo $this->form->getElement("payMethod");
+    ?>
+  </div>
+  <div class="aditionalInformation">
+    <ul>
+      <li><?php echo $this->translate("Pagas tu compra al momento de recibirla en el domicilio pactado.");?></li>
+      <li><?php echo $this->translate("Recorda que el monto de tu compra NO incluye el costo de envio, que sera calculado de acuerdo a la dirección de entrega y el tamaño del/los bultos");?>.</li>
+    </ul>
+    <div class="separator"></div>
+  </div>
+
+  <div class="payMethod">
+    <div id="paymentIconsHolder"></div>
+  </div>
+  <button id="step3Button" type="button"><?php echo $this->translate("CONFIRMAR COMPRA");?></button>
+</div>

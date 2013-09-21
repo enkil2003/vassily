@@ -1,0 +1,65 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/modules/admin/views/scripts/category/sort.phtml $
+ * @revision - $Revision: 322 $
+ * 
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2011-12-31 02:17:49 -0300 (Sat, 31 Dec 2011) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<?php
+$this->placeholder('admin')->captureStart();
+?>
+  <form id="newSubcategory" method="post" action="<?php echo $this->form->getAction() ?>">
+    <div id="parentCategoryContainer">
+      <label for="name">Categoria padre</label>
+      <?php echo $this->form->getElement('category'); ?>
+    </div>
+  </form>
+<div id="info"></div>
+<ul id="sortable">
+</ul>
+
+<script type="text/javascript">
+function addSubcategoryItem(id, name) {
+    var li = '<li id="order_'+id+'">'+name+'</li>';
+    $("#sortable").append(li);
+}
+$(document).ready(function() {
+$('#newSubcategory #category').change(function(){
+    $("#sortable").empty();
+    var value = $(this).val();
+    if(value != -1) {
+        $.get(
+            "/admin/subcategory/ajax/request/subcategoriesList",
+            {'parentCategoryId': value},
+            function (e) {
+                var i;
+                for(i in e) {
+                    addSubcategoryItem(e[i].id, e[i].name);
+                }
+            },
+            'json'
+        )
+    }
+})
+$("#sortable").sortable({
+    update : function () {
+        var order = $('#sortable').sortable('serialize');
+        $("#info").load("/admin/category/ajax/request/setSubcategoriesOrder/?"+order);
+    }
+});
+});
+</script>
+<?php 
+$this->placeholder('admin')->captureEnd();
+?>

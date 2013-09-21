@@ -1,0 +1,50 @@
+<?php 
+/**
+ * Vassilymas
+ *
+ * @license - $License: http://www.gnu.org/licenses/gpl.txt $
+ *
+ * @author - $Author: enkil2003 $
+ * @date - $Date: 2012-01-17 00:14:32 -0300 (Tue, 17 Jan 2012) $
+ * 
+ * @filesource - $HeadURL: https://subversion.assembla.com/svn/vassilymas/trunk/src/application/layouts/partials/social.phtml $
+ * @revision - $Revision: 356 $
+ *   
+ * @LastChangedBy $LastChangedBy: enkil2003 $
+ * @lastChangedDate - $LastChangedDate: 2012-01-17 00:14:32 -0300 (Tue, 17 Jan 2012) $
+ * 
+ * @copyright - Copyright: (c) 2011 and future, Ricardo Buquet
+ */
+?>
+<section id="yourProject" class="clear">
+  <div class="fixedHeight" id="firstColumn">
+      <p><?php echo $this->translate('arma vos <br /><span>tu proyecto</span><br />elegi el mueble que te<br />gusta y nosotros lo hacemos<br />como vos quieras')?></p>
+      <p class="more"><a href="/"><?php echo $this->translate('mas')?>!</a></p>
+    </div>
+    <div class="fixedHeight separator" id="firstSeparator"></div>
+    <div class="fixedHeight" id="secondColumn">
+      <h4><?php echo $this->translate('Recibí NOVEDADES via mail')?></h4>
+      <p><?php echo $this->translate('Subscribite a nuestro Newsletter y recibiras solamente<br />las fotos de los nuevos muebles que se incorporan<br />a nuestro sitio. Es una manera de estar al tanto de nuestras<br />ofertas y novedades.')?></p>
+      <div id="quickNewsletterFormHolder">
+        <div id="quickNewsletterStatusMessenger"></div>
+      <?php 
+      // @TODO use the Form_Newsletter
+      ?>
+        <form method="post" action="/newsletter">
+          <input type="email" name="email" placeholder="<?php echo $this->translate('Ingrese su email')?>" />
+          <input type="text" name="name" placeholder="<?php echo $this->translate('Nombre')?>" />
+          <button id="send" type="button" name="submit"><?php echo $this->translate('ENVIAR')?></button>
+        </form>
+      </div>
+    </div>
+  <div class="fixedHeight separator"></div>
+  <div class="fixedHeight" id="thirdColumn">
+    <h4><?php echo $this->translate('Unite a la tribu')?></h4>
+    <ul class="social">
+      <li><?php echo $this->facebookButtons(); ?></li>
+      <li><?php echo $this->twitterButtons(); ?></li>
+      <li><?php echo $this->googlePlusButtons(); ?></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</section>

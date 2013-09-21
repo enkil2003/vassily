@@ -1,0 +1,9 @@
+@CHARSET "utf-8";
+#confirmBox .button span,
+#confirmBox .button,
+#confirmOverlay,
+#confirmBox,
+#confirmBox h1,
+#confirmBox p {
+    background-image: none;
+}

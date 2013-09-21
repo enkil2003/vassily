@@ -1,0 +1,29 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Required configuration to make site work ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;
+;; PHP ;;
+;;;;;;;;;
+
+php.ini's zlib.output_compression on Must Be On
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Apache2 required modules ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+LoadModule deflate_module modules/mod_deflate.so
+  # linux short command: a2enmod deflate
+  # This command could need sudo prefix
+
+LoadModule expires_module modules/mod_expires.so
+  # linux short command: a2enmod expires
+  # This command could need sudo prefix
+
+LoadModule headers_module modules/mod_headers.so
+  # linux short command: a2enmod headers
+  # This command could need sudo prefix
+
+

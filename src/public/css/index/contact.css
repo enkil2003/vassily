@@ -1,0 +1,156 @@
+@CHARSET "ISO-8859-1";
+#contactFormHolder {
+    position: relative;
+}
+#contactFormHolder fieldset {
+    border: 0;
+    margin-bottom: 0;
+}
+#contactFormHolder .requiredFields {
+    text-align: right;
+    width: 864px;
+    position: absolute;
+    top: -12px;
+}
+#contactFormHolder legend {
+    color: #A70B16;
+}
+#contactFormHolder .disclaimer {
+    margin-left: 284px;
+}
+#contactFormHolder .requiredFields span.asterix {
+    color: #A70B16;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#catalogRightColumn {
+    border: 1px solid;
+    width: 882px;
+    padding: 15px;
+    border-color: #AAA;
+}
+#contactFormHolder #commentsHolder {
+vertical-align: top;
+}
+#contactFormHolder #commentsHolder label {
+vertical-align: top;
+margin-top: 8px;
+}
+#contactFormHolder .fields div div {
+    display: inline-block;
+}
+#contactFormHolder .requiredFields {
+    text-align: right;
+    width: 864px;
+    position: absolute;
+    top: -12px;
+}
+#contactFormHolder #commentsHolder textarea {
+    font-size: 13px;
+    margin-top: 5px;
+    padding-left: 0;
+    padding-top: 2px;
+    width: 395px;
+}
+#contactFormHolder .requiredFields span.asterix {
+    color: #A70B16;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#contactFormHolder label {
+    font-weight: bold;
+    display: inline-block;
+    width: 290px;
+    text-align: right;
+}
+#contactFormHolder #name,
+#contactFormHolder #lastname,
+#contactFormHolder #email,
+#contactFormHolder #phone,
+#contactFormHolder #city{
+    width: 250px;
+}
+#contactFormHolder #province {
+    /* has ie fix */
+    width: 252px;
+}
+#contactFormHolder fieldset.direccion {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#contactFormHolder .newsletter div:first-child {
+    width: 293px;
+    text-align: right;
+}
+#contactFormHolder .newsletter #newsletter {
+    width: 13px;
+}
+#contactFormHolder #aditionalData {
+    height: 100px;
+    width: 240px;
+}
+#contactFormHolder .aditionalData div label {
+    height: 100px;
+    vertical-align: top;
+    line-height: 31px;
+}
+#contactFormHolder .requiredFields span.text {
+    position: relative;
+    top: -18px;
+}
+#contactFormHolder fieldset {
+    border: 0;
+    color: #A70B16;
+}
+#contactFormHolder fieldset div {
+    color: #444;
+}
+#contactFormHolder .requiredMark {
+    color: #A70B16;
+    font-size: 25px;
+    line-height: 0;
+    margin-left: 5px;
+    position: relative;
+    top: 8px;
+}
+#contactFormHolder #commentsHolder .requiredMark {
+    vertical-align: top;
+    top: 20px;
+}
+#contactFormHolder .aclaration {
+    margin-left: 15px;
+}
+#contactFormHolder .submitFormHolder {
+    text-align: right;
+    margin-right: 170px;
+}
+#contactFormHolder .submit {
+    /* has ie fix */
+    /* has firefox hack */
+    position: relative;
+    top: -39px;
+    left: 644px;
+    display: inline-block;
+    text-align: right;
+}
+#contactFormHolder .error {
+    margin-left: 293px;
+    width: 230px;
+    list-style: none;
+}
+#contactFormHolder #commentsErrorHolder {
+    width: 380px;
+    margin-top: -5px;
+}
+@-moz-document url-prefix() {
+    /* firefox hack */
+    #contactFormHolder .submit {
+        top: -35px;
+        left: 646px;
+    }
+    #contactFormHolder #commentsErrorHolder {
+        margin-top: 0;
+    }
+}

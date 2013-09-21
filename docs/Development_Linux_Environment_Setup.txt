@@ -1,0 +1,102 @@
+Nota: algunos de los comandos pueden variar dependiendo el entorno y permisos
+Ej: el comando A quizas deba ejecutarse con permisos Sudo, comando B
+  A> pear install phpunit/DbUnit
+  B> sudo pear install phpunit/DbUnit
+
+;;;;;;;;;;;;
+;; XDEBUG ;;
+;;;;;;;;;;;;
+
+Instalar dependencias de XDebug:
+
+Opcion 1:
+
+  $ sudo apt-get install autoconf;
+
+Si no funciona
+Opcion 2:
+
+  $ cd /usr/src
+  $ sudo wget http://ftp.gnu.org/gnu/m4/m4-1.4.9.tar.gz
+  $ sudo tar -zvxf m4-1.4.9.tar.gz
+  $ cd m4-1.4.9/
+  $ sudo ./configure
+  $ sudo make
+  $ sudo make install
+  $ cd ../
+  $ sudo wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.62.tar.gz
+  $ sudo tar -zvxf autoconf-2.62.tar.gz
+  $ cd autoconf-2.62/
+  $ sudo ./configure
+  $ sudo make
+  $ sudo make install
+
+Instalar XDebug
+sudo /usr/local/zend/bin/pecl install xdebug
+
+Con esto tenemos instalado el xdebug
+Ahora falta hacerlo correr dentro del Zend Server
+
+[$ sudo ln -s /usr/local/zend/bin/zendctl.sh /usr/sbin/zendctl]
+[$ sudo ln -s /usr/local/zend/bin/pear /usr/sbin/pear]
+[$ sudo ln -s /usr/local/zend/bin/pecl /usr/sbin/pecl]
+[$ sudo ln -s /usr/local/zend/bin/php /usr/sbin/php]
+[$ sudo ln -s /usr/local/zend/bin/phpize /usr/sbin/phpize]
+
+Ahora hay que sacar el zend debugger, esto se puede hacer manualmente o desde el admin de zend localhost:10081
+
+para hacerlo manualmente modificar el archivo /usr/local/zend/etc/conf.d/debugger.ini
+y comentar la siguiente linea:
+
+; register the extension to be loaded by Zend Extension Manager
+;zend_extension_manager.dir.debugger=/usr/local/zend/lib/debugger
+
+Luego Xdebug necesita ser cargado antes del Zend Extension Manager, es por esto que vamos a modificar el archivo /usr/local/zend/etc/ext.d/extension_manager.ini
+y en su primera linea ponemos 
+zend_extension=/usr/local/zend/lib/php_extensions/xdebug.so
+
+reiniciamos apache
+sudo /etc/init.d/zend-server restart
+
+Y ahora desde el phpinfo o bien desde consola, podemos ver la correcta instalacion del xdebug
+
+php -i |grep xdebug
+
+REFERENCIA: http://www.myscienceisbetter.info/setting-up-xdebug-with-zend-server-on-linux.html
+
+
+;;;;;;;;;;;;;;;;;;;
+;; PHPUnit 3.6.5 ;;
+;;;;;;;;;;;;;;;;;;;
+reference: http://www.phpunit.de/manual/3.6/en/installation.html
+
+$ sudo pear upgrade PEAR
+$ sudo pear config-set auto_discover 1
+$ sudo pear install pear.phpunit.de/PHPUnit
+
+
+;;;;;;;;;;;;;;;;;;
+;; DBUnit 1.1.1 ;;
+;;;;;;;;;;;;;;;;;;
+
+$ sudo pear install phpunit/DbUnit
+
+
+;;;;;;;;;;;;;;;;;
+;; Phing 2.4.8 ;;
+;;;;;;;;;;;;;;;;;
+reference: http://www.phing.info/trac/wiki/Users/Download
+
+$ sudo pear channel-discover pear.phing.info
+$ sudo pear install phing/phing
+$ sudo pear install channel://pear.php.net/VersionControl_SVN-0.4.0
+[$ sudo ln -s /usr/local/zend/bin/phing /usr/sbin/phing]
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Code Sniffer 1.3.2 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+$ sudo pear install PHP_CodeSniffer-1.3.2
+[$ sudo ln -s /usr/local/zend/bin/phpcs /usr/sbin/phpcs]

@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+#catalogRightColumn {
+    border: 1px solid;
+    width: 882px;
+    padding: 15px;
+    border-color: #AAA;
+}
+#registrationAndLogin .errors {
+    /* hack, porque se hicieron muchos hacks para mostrar el tamaño de la caja cuando hay error de login
+       es por eso tambien el namespace que no corresponde
+    */
+    margin: 0 0 0 15px;
+    width: 242px;
+}
+#registrationAndLogin #registration, /* has ie fix */
+#registrationAndLogin #loginForm {
+    display: inline-block;
+    border: 0;
+    vertical-align: top;
+    width: 391px;
+}
+#registrationAndLogin #loginForm {
+margin-left: 25px;
+}
+#registrationAndLogin legend {
+    /* has ie fix */
+    font-family: "Trebuchet MS", trebucbd, sans-serif;
+    color: #A70B16;
+}
+#registrationAndLogin .separator {
+    height: 150px;
+    border-right: 1px solid #AAA;
+    display: inline-block;
+}
+#registrationAndLogin .usernameOrEmailLabel, 
+#registrationAndLogin .passwordLabel {
+    /* both has ie fix */
+    display: inline-block;
+    text-align: right;
+    width: 102px;
+    font-weight: normal;
+}
+#registrationAndLogin .submitFormHolder {
+    /* has ie fix */
+    margin-left: 104px;
+    margin-top: 10px;
+}
+#registrationAndLogin .submitFormHolder div {
+    display: inline-block;
+}
+#headerPromotionHolders {
+    margin-bottom: 10px;
+}
+#registration h4 {
+    /* has ie fix */
+    margin-top: 9px;
+    font-size: 13px;
+    font-weight: normal;
+}
+#registrationAndLogin #registrarse {
+    /* has ie fix */
+    position: relative;
+    left: 140px;
+    top: 27px;
+}
+@-moz-document url-prefix() {
+    /* firefox hack */
+    #registrationAndLogin {
+        margin-top: -1px;
+        margin-bottom: 1px;
+    }
+    #registrationAndLogin #registrarse {
+        height: 22px;
+        left: 142px;
+        top: 28px;
+        width: 98px;
+    }
+    #registrationAndLogin #registration {
+        width: 390px;
+    }
+    #registrationAndLogin #loginForm {
+        margin-left: 24px;
+    }
+    #registrationAndLogin #usernameOrEmailHolder {
+        position: relative;
+        height: 33px;
+    }
+    #registrationAndLogin #usernameOrEmailHolder label {
+        position: absolute;
+        top: 9px;
+    }
+    #registrationAndLogin #usernameOrEmail {
+        height: 18px;
+        left: 108px;
+        top: -1px;
+        width: 173px;
+    }
+    #registrationAndLogin #loginForm section {
+        position: relative;
+    }
+    #registrationAndLogin .passwordHolder {
+        position: relative;
+    }
+    #registrationAndLogin .passwordHolder label {
+        position: absolute;
+        top: 10px;
+    }
+    #registrationAndLogin .passwordHolder #password {
+        height: 18px;
+        left: 108px;
+        position: absolute;
+        width: 131px;
+    }
+    #registrationAndLogin .submitFormHolder {
+        margin-left: 108px;
+        top: 70px;
+    }
+    #registrationAndLogin .submitFormHolder #submit {
+        height: 22px;
+        width: 68px;
+    }
+    #registrationAndLogin .submitFormHolder .retrieve {
+        
+    }
+    #registrationAndLogin .submitFormHolder div {
+        left: 2px;
+        position: relative;
+        top: -1px;
+    }
+    #registrationAndLogin #loginHolder {
+        height: 70px;
+    }
+}
