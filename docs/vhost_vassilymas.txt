@@ -13,7 +13,7 @@ Linux: You should create a vassilymas.conf file in sites-available and then run 
 This command could need sudo prefix
 
 <VirtualHost *:80>
-    DocumentRoot "/home/ricardo/www/vassilymas/trunk/public"
+    DocumentRoot "/Users/groupon1/Sites/vassily/src/public"
     ServerName vassilymas.local
     ServerAlias staticvassilymas.local
     ServerAlias www.vassilymas.local
@@ -24,9 +24,9 @@ This command could need sudo prefix
     SetEnv APPLICATION_ENV development
     SetEnv APPLICATION_CDN "http://staticvassilymas.local"
     
-    ErrorLog "/home/ricardo/www/vassilymas/trunk/logs/apache/error.log"
-    CustomLog "/home/ricardo/www/vassilymas/trunk/logs/apache/access.log" common
-    CustomLog "/home/ricardo/www/vassilymas/trunk/logs/apache/deflate.log" deflate
+    ErrorLog "/Users/groupon1/Sites/vassily/src/logs/apache/error.log"
+    CustomLog "/Users/groupon1/Sites/vassily/src/logs/apache/access.log" common
+    CustomLog "/Users/groupon1/Sites/vassily/src/logs/apache/deflate.log" deflate
     
     Header unset ETag
     FileETag None
@@ -39,14 +39,14 @@ This command could need sudo prefix
         FileETag None
     </FilesMatch>
 
-    <Directory "/home/ricardo/www/vassilymas/trunk/public">
+    <Directory "/Users/groupon1/Sites/vassily/src/public">
         Options Indexes MultiViews FollowSymLinks
         AllowOverride All
         Order allow,deny
         Allow from all
     </Directory>
     
-    <Directory "/home/ricardo/www/vassilymas/trunk/public/css">
+    <Directory "/Users/groupon1/Sites/vassily/src/public/css">
         ExpiresDefault "access plus 10 years"
         Options Indexes MultiViews FollowSymLinks
         AllowOverride All
@@ -54,7 +54,7 @@ This command could need sudo prefix
         Allow from all
     </Directory>
     
-    <Directory "/home/ricardo/www/vassilymas/trunk/public/js">
+    <Directory "/Users/groupon1/Sites/vassily/src/public/js">
         ExpiresDefault "access plus 10 years"
         Options Indexes MultiViews FollowSymLinks
         AllowOverride All
@@ -62,7 +62,7 @@ This command could need sudo prefix
         Allow from all
     </Directory>
     
-    <Directory "/home/ricardo/www/vassilymas/trunk/public/images">
+    <Directory "/Users/groupon1/Sites/vassily/src/public/images">
         Header set Expires "access plus 10 years"
         ExpiresDefault "access plus 10 years"
         Options Indexes MultiViews FollowSymLinks
@@ -71,7 +71,7 @@ This command could need sudo prefix
         Allow from all
     </Directory>
     
-    <Directory "/home/ricardo/www/vassilymas/trunk/public/uploads/image">
+    <Directory "/Users/groupon1/Sites/vassily/src/public/uploads/image">
         Header set Expires "access plus 10 years"
         ExpiresDefault "access plus 10 years"
         Options Indexes MultiViews FollowSymLinks
@@ -80,7 +80,7 @@ This command could need sudo prefix
         Allow from all
     </Directory>
     
-    <Directory "/home/ricardo/www/vassilymas/trunk/public/uploads/thumb">
+    <Directory "/Users/groupon1/Sites/vassily/src/public/uploads/thumb">
         Header set Expires "access plus 10 years"
         ExpiresDefault "access plus 10 years"
         Options Indexes MultiViews FollowSymLinks
@@ -89,7 +89,7 @@ This command could need sudo prefix
         Allow from all
     </Directory>
     
-    <Location "/home/ricardo/www/vassilymas/trunk/public">
+    <Location "/Users/groupon1/Sites/vassily/src/public">
         SetOutputFilter DEFLATE
         BrowserMatch ^Mozilla/4 gzip-only-text/html
         BrowserMatch ^Mozilla/4\.0[678] no-gzip
